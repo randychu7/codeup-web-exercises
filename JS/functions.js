@@ -117,4 +117,4 @@ function applyDiscount(price,discount){
     let totalDeal = price * discount;
     return totalDeal;
 }
-console.log ("You saved $" + applyDiscount(2303,0.20) + "!");
+console.log ("You saved $" + applyDiscount(100,0.20) + "!");

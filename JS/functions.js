@@ -31,6 +31,7 @@ console.log(sayHello("Randy"));
 //
 let helloMessage = sayHello("Randy");
     console.log(helloMessage);
+
 //
 // /**
 //  * TODO:
@@ -42,6 +43,7 @@ let helloMessage = sayHello("Randy");
 let myName = "John";
 let helloMessage2 = console.log(sayHello(myName));
 console.log(helloMessage2);
+
 //
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
@@ -94,6 +96,7 @@ console.log(randomAnswer);
 //  * > calculateTip(0.25, 25.50) // returns 6.375
 //  * > calculateTip(0.15, 33.42) // returns 5.013
 //  */
+
 let tipAnswer = calculateTip(10231,22);
 console.log(tipAnswer);
 
@@ -103,6 +106,7 @@ function calculateTip(bill,tip){
     let completeTip = parseFloat(total);
     return completeTip;
 }
+
 //
 // /**
 //  * TODO:
@@ -111,6 +115,7 @@ function calculateTip(bill,tip){
 //  * then display the dollar amount they should tip
 //  */
 //
+
 let mealPrice = prompt("How much was your meal?");
 let tipAmount = prompt("What percent would you like to tip");
 
@@ -118,6 +123,7 @@ let tipAmount = prompt("What percent would you like to tip");
 let tipTotal = calculateTip( mealPrice, tipAmount )
 
 alert(tipTotal.toFixed(2));
+
 //
 //
 // /**
@@ -135,6 +141,7 @@ alert(tipTotal.toFixed(2));
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
 //
+
 let appliedDiscount = applyDiscount(100,25);
 console.log(`You are about to apply a discount`);
 console.log(`You owe ${appliedDiscount}!`);

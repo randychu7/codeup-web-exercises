@@ -96,7 +96,7 @@ switch (randomColor){
 //  *
 //  * Write a function named `calculateTotal` which accepts a lucky number and total
 //  * amount, and returns the discounted price.
-//  *
+
 
 //  * Example:
 //  * calculateTotal(0, 100) // returns 100

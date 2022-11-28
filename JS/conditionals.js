@@ -1,4 +1,4 @@
-// "use strict";
+ "use strict";
 //
 // // /* ########################################################################## */
 // //
@@ -107,22 +107,22 @@
 // //  * return value.
 // //  */
 //
-// // function calculateTotal(luckyNumber, totalAmount) {
-// //     if (luckyNumber === 0) {
-// //         return totalAmount + 0;
-// //     }
-// // else if (luckyNumber === 1){
-// //         return totalAmount * 0.90}
-// // else if (luckyNumber === 2){
-// //         return totalAmount * 0.75}
-// // else if (luckyNumber === 3){
-// //         return totalAmount * 0.65}
-// // else if (luckyNumber === 4){
-// //         return totalAmount * 0.50}
-// // else if (luckyNumber === 5){
-// //         return;
-// //     }
-// // }
+function calculateTotal(luckyNumber, totalAmount) {
+    if (luckyNumber === 0) {
+        return totalAmount + 0;
+    }
+else if (luckyNumber === 1){
+        return totalAmount * 0.90}
+else if (luckyNumber === 2){
+        return totalAmount * 0.75}
+else if (luckyNumber === 3){
+        return totalAmount * 0.65}
+else if (luckyNumber === 4){
+        return totalAmount * 0.50}
+else if (luckyNumber === 5){
+        return;
+    }
+}
 //
 // function calculateTotal(luckyNumber, totalAmount) {
 //     if (luckyNumber === 0) {
@@ -158,42 +158,42 @@
 //
 // // Generate a random number between 0 and 6
 //
-// var luckyNumber = Math.floor(Math.random() * 6);
-//
-//
-// alert(`Your lucky number is ${luckyNumber}!`);
-//
-// let totalAmount = prompt("How much was your bill?");
-//
-// let finalDiscount = calculateTotal(luckyNumber,totalAmount);
-//
+var luckyNumber = Math.floor(Math.random() * 6);
+
+
+alert(`Your lucky number is ${luckyNumber}!`);
+
+let totalAmount = prompt("How much was your bill?");
+
+calculateTotal(luckyNumber,totalAmount);
+
 // alert(finalDiscount);
-//
-// //
-// // if (luckyNumber === 1){
-// //     alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.90)}`);
-// // }
-// // else if (luckyNumber === 2){
-// //     alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.75)}`);
-// // }
-// // else if (luckyNumber === 3){
-// //     alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.65).toFixed(2)}`);
-// // }
-// // else if (luckyNumber === 4){
-// //     alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.55).toFixed(2)}`);
-// // }
-// // else if (luckyNumber === 5){
-// //     alert(`Your price before the discount is ${totalAmount}, your meal is free!`);
-// // }
-// // else if (luckyNumber === 6){
-// //     alert(`Your price before the discount is ${totalAmount}, your meal is exclusive`);
-// // }
-// //
-// // else if (luckyNumber === 0){
-// //     alert(`Your price before the discount is ${totalAmount}, you get no discount`);
-// //
-// // }
-//  // alert(finalDiscount);
+
+
+if (luckyNumber === 1){
+    alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.90).toFixed(2)}`);
+}
+else if (luckyNumber === 2){
+    alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.75).toFixed(2)}`);
+}
+else if (luckyNumber === 3){
+    alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.65).toFixed(2)}`);
+}
+else if (luckyNumber === 4){
+    alert(`Your price before the discount is ${totalAmount}, your price after the discount is ${(totalAmount * 0.55).toFixed(2)}`);
+}
+else if (luckyNumber === 5){
+    alert(`Your price before the discount is ${totalAmount}, your meal is free!`);
+}
+else if (luckyNumber === 6){
+    alert(`Your price before the discount is ${totalAmount}, your meal is exclusive`);
+}
+
+else if (luckyNumber === 0){
+    alert(`Your price before the discount is ${totalAmount}, you get no discount`);
+
+}
+ // alert(finalDiscount);
 //
 //
 //
@@ -219,68 +219,59 @@
 
 
 // let enterNumber = prompt("Please enter a number.");
-
-const userInput = confirm("Would you like to enter a number?"); // cancel => false ok => true
-
-
-function confirmPromptFunction(userInputAnswer) {
-    if (userInputAnswer === false) {
-        return;
-    }
-
-    const isNumberIsOddOrEven = prompt("Please enter a number");
-
-    if(isNaN(isNumberIsOddOrEven)){
-        alert("That is not a number");
-        return;
-    }
-
-    alert(isNumberIsOddOrEven + ` + 100 is equal to ${parseInt(isNumberIsOddOrEven) + 100}`);
-
-    if(isNumberIsOddOrEven % 2 === 0){
-        alert('Your number is even')
-    } else{
-        alert('Your number is odd')
-    }
-
-
-};
-
-
-confirmPromptFunction(userInput);
-
-
+//
+// const userInput = confirm("Would you like to enter a number?"); // cancel => false ok => true
+//
+//
+// function confirmPromptFunction(userInputAnswer) {
+//     if (userInputAnswer === false) {
+//         return;
+//     }
+//
+//     const isNumberIsOddOrEven = prompt("Please enter a number");
+//
+//     if(isNaN(isNumberIsOddOrEven)){
+//         alert("That is not a number");
+//         return;
+//     }
+//
+//     alert(isNumberIsOddOrEven + ` + 100 is equal to ${parseInt(isNumberIsOddOrEven) + 100}`);
+//
+//     if(isNumberIsOddOrEven % 2 === 0){
+//         alert('Your number is even')
+//     } else{
+//         alert('Your number is odd')
+//     }
+//
+//
+// };
+//
+//
+// confirmPromptFunction(userInput);
 
 
+// alert("Please add two numbers into the calculator.");
+//
+// let firstInput = prompt("Please enter the first input");
+//
+// let operationCalculate = prompt("What would you like to do with the numbers?");
+//
+// function calculatorData () {
+//     if (operationCalculate == '+') {
+//         alert (parseInt(firstInput) + parseInt(secondInput));
+//     } else if (operationCalculate == '-') {
+//         alert (parseInt(firstInput) - parseInt(secondInput));
+//     } else if (operationCalculate == '*') {
+//         alert (parseInt(firstInput) * parseInt(secondInput));
+//     } else if (operationCalculate == '/' ) {
+//         alert (parseInt(firstInput) / parseInt(secondInput));
+//     }
+// }
+//
+// let secondInput = prompt("Please enter the second input");
+//
+// calculatorData();
 
 
-    // if (isNaN(enterNumber)) {
-    //     alert("This is not a number");
-    //     return;
-    // }
-    //
-    // // var enterNumber;
-    //
-    // // while (true) {
-    // //     enterNumber = prompt("Please enter a number", "");
-    // //     if (!isNaN(enterNumber)) {
-    // //         break;
-    // //     }
-    // //     alert("Please enter a number");
-    // // }
-    //
-    //  if (enterNumber % 2 !== 0) {
-    //     alert("The number is odd");
-    // } else if (enterNumber % 2 === 0) {
-    //     alert("The number is even");
-    // }
-    //
-    // alert(enterNumber + ` + 100 is equal to ${parseInt(enterNumber) + 100}`);
-    //
-    //  if (enterNumber < 0) {
-    //     alert("The number is negative");
-    // } else if (enterNumber > 0) {
-    //     alert("The number is positive");
-    // }
 
 

@@ -144,5 +144,26 @@
 //
 // console.log(isConsonant('h'));
 
-function toCapital(letter){
-    let capital let
+// function toCapital(letter) {
+//     let result = letter.toUpperCase();
+//     return result;
+// }
+//
+// console.log(toCapital('hello'));
+
+// function toLowerCase(letter){
+//     let result = letter.toLowerCase();
+//     return result;
+// }
+//
+// console.log(toLowerCase('HELLO'));
+
+function hasLowerCase(string){
+    if(string == string.toLowerCase()){
+        return true;
+    } else {
+    return false;
+    }
+}
+
+console.log(hasLowerCase("hello"));

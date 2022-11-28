@@ -22,20 +22,24 @@
 // //  * console.logging the function's return value
 // //  */
 // //
-// analyzeColor("black");
-//
-// function analyzeColor(color){
-//     if(color === "red"){
-//         return "Red is the color of an apple.";
-//     }else if(color === "blue") {
-//         return "Blue is the color of the sky!";
-//     } else if(color === "green") {
-//         return "Green is the color of grass";
-//     } else {
-//         return `I don't know anything about ${color}`;
-//     }
-//
-// }
+analyzeColor("black");
+
+function analyzeColor(color){
+    let colorLower = color.toLowerCase();
+    if(colorLower === "red"){
+        return "Red is the color of an apple.";
+    }else if(colorLower === "blue") {
+        return "Blue is the color of the sky!";
+    } else if(colorLower === "green") {
+        return "Green is the color of grass";
+    } else {
+        return `I don't know anything about ${color}`;
+    }
+
+}
+ let result = analyzeColor('red');
+ console.log(result);
+
 // // // Don't change the next two lines!
 // // // These lines create two variables for you:
 // // - `colors`: a list of the colors of the rainbow
@@ -48,28 +52,32 @@
 // //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 // //  * You should see a different message every time you refresh the page
 // //  */
-// let colorRandom = analyzeColor(randomColor);
-// console.log(colorRandom);
+let colorRandom = analyzeColor(randomColor);
+console.log(colorRandom);
 //
 // // // /**
 // // //  * TODO:
 // // //  * Comment out the code above, and refactor your function to use a switch-case statement
 // // //  */
-// // //
-// switch (randomColor){
-//     case 'red':
-//         console.log("Red is the color of apples");
-//         break;
-//     case 'orange':
-//         console.log("orange is the color of oranges");
-//         break;
-//     case 'yellow':
-//         console.log("yellow is the color of the sun");
-//         break;
-//     default:
-//         console.log(`I don't know anything about ${randomColor}`);
-//         break;
-// }
+
+ let result;
+switch (randomColor){
+
+    case 'red':
+        result = ("Red is the color of apples");
+        break;
+    case 'orange':
+        result = ("orange is the color of oranges");
+        break;
+    case 'yellow':
+        result = ("yellow is the color of the sun");
+        break;
+    default:
+        result = (`I don't know anything about ${randomColor}`);
+        break;
+}
+
+
 // // // /**
 // // //  * TODO:
 // // //  * Prompt the user for a color when the page loads, and pass the input from the
@@ -77,9 +85,9 @@
 // // //  * function to show it to the user.
 // // //  */
 // // //
-// // let inputColor = prompt("Please input a color!");
-// // let answer = analyzeColor(inputColor);
-// // alert(answer);
+let inputColor = prompt("Please input a color!");
+let answer = analyzeColor(inputColor);
+alert(answer);
 // //
 // //
 //
@@ -108,6 +116,7 @@
 // //  */
 //
 // function calculateTotal(luckyNumber, totalAmount) {
+//
 //     if (luckyNumber === 0) {
 //         return totalAmount + 0;
 //     }
@@ -122,6 +131,10 @@
 // else if (luckyNumber === 5){
 //         return;
 //     }
+
+
+
+
 
 //
 // function calculateTotal(luckyNumber, totalAmount) {

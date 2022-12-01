@@ -1,11 +1,11 @@
 "use strict"
 
 
-// function showMultiplicationTable(input){
-//     console.log(input * 1, input * 2, input * 3, input * 4, input * 5, input * 6,input * 7, input * 8, input * 9, input * 10);
-// }
-//
-// showMultiplicationTable(3);
+function showMultiplicationTable(num){
+    for (var i = 1; i <= 10; i++){
+        console.log(num * i);
+    }}
+showMultiplicationTable(7);
 
 
 
@@ -47,9 +47,9 @@
 //  }
 //
 
-
-let i = 1;
-while( i < 65536){
-        i+=i;
-    console.log(i);
-}
+//
+// let i = 1;
+// while( i < 65536){
+//         i+=i;
+//     console.log(i);
+// }

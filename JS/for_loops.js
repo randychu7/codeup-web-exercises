@@ -1,13 +1,15 @@
 "use strict"
-
-
-function showMultiplicationTable(num){
-    for (var i = 1; i <= 10; i++){
-        console.log(num * i);
-    }}
-showMultiplicationTable(7);
-
-
+function getRandomNumber(min,max){
+   return Math.floor(Math.random() * (max-min+1) + min);
+}
+//
+// function showMultiplicationTable(num){
+//     for (var i = 1; i <= 10; i++){
+//         console.log(num * i);
+//     }}
+// showMultiplicationTable(7);
+//
+//
 
 //
 // for (var i = 0; i< 10; i++) {
@@ -22,12 +24,16 @@ showMultiplicationTable(7);
 //
 //
 //
-// for (let i = 0; i <= 10; i++) {
-//     for (let j = 1; j <= i; j++) {
-//         console.log(i);
-//     }
-// }
-//
+for (let i = 0; i <= 8; i++) {
+    let number = i+1;
+    let result = `${number}`;
+    for (let j = 1; j <= i; j++) {
+        result += number;
+    }
+    console.log(result);
+
+}
+
 
 // // Loop down from 100 - 5 by increaments of 5 *
 // for(var i = 100; i >= 5; i-=5) {
@@ -47,6 +53,7 @@ showMultiplicationTable(7);
 //  }
 //
 
+console.log(getRandomNumber(1,200));
 //
 // let i = 1;
 // while( i < 65536){

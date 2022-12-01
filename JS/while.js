@@ -6,54 +6,26 @@
 //     console.log(i);
 // }
 
-// var allCones = Math.floor(Math.random() * 50) + 50;
-//
-// console.log(`Number of cones to sell ${allCones}`);
-// let i = 0;
-//
-// do {
-//     var conesSold = Math.floor(Math.random()*(5-1))+1;
-//     if(allCones === 0){
-//         console.log("Yay I sold them all!")
-//         break;
-//     }else if(allCones>= conesSold){
-//        allCones = allCones- conesSold;
-//         console.log(`You sold ${conesSold} amount of cones`);
-//         console.log(`You have ${allCones} left`);
-//     }
-//
-//    else if (allCones < conesSold){
-//         console.log(`I cannot sell you ${conesSold} cones I only have ${allCones}`)
-//     }
-//     i++;
-// } while(i < 100)
 
 
 
 
+var allCones = Math.floor(Math.random() * 50) + 50; //Number of cones I have.
 
+let i = 0 // i starts at zero,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-var allCones = Math.floor(Math.random() * 50) + 50;
-console.log("Number of Cones for Sale");
-let i = 0
 do {
-    let conesSold = Math.floor(Math.random() * 5) + 1;
-    console.log("number of cones sold");
-    allCones = allCones - conesSold;
-    console.log(allCones);
+    let conesSold = Math.floor(Math.random() * 5 - 1) + 1; //Randomized cones being sold
+    console.log(`I have ${allCones} cones`);
+    console.log(`number of cones sold ${conesSold}`);
 
-i++
-}while(i<100);
+    if (allCones === 0) {                       // If cones hit 0 log and break from loop.
+        console.log("I sold all my cones!");
+        break;
+    } else if(allCones >= conesSold){           //If all cones is more than or equal to cones sold:
+        allCones = allCones - conesSold;        // subtract the Number of cones with conesSold and replace the variable until condition is met.
+
+}
+i++ // for each loop the conditions are being run until allCones = 0 or i=100;
+
+}while (i<100);

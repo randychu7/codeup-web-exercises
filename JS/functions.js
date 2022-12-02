@@ -354,8 +354,10 @@
 
 function returnStrNums(input) {
     let returnNum = input.split('');
-    if (parseInt(returnNum) === 'number') {
-        console.log(input);
-    }
+    console.log(returnNum);
+    var parseNum = stringArray.map(Number);
+    console.log(parseNum);
+
 }
-returnStrNums('awds1234');
+
+console.log(returnStrNums('awds1234'));

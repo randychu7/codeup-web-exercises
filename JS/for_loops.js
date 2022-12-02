@@ -55,8 +55,3 @@ for (let i = 0; i <= 8; i++) {
 
 console.log(getRandomNumber(1,200));
 //
-// let i = 1;
-// while( i < 65536){
-//         i+=i;
-//     console.log(i);
-// }

@@ -109,7 +109,7 @@
 // ‘input num in input array’ if the second argument is an element in the first argument array
 //     otherwise, the function should return the string ‘input num NOT in input array’
 
-    let array = [1, 2, 3, 4, 5, 6, 7]
+    // let array = [1, 2, 3, 4, 5, 6, 7]
 
 
 // function checkIfNumInArray(number){

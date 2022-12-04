@@ -1,4 +1,4 @@
-(function(){
+(function() {
     "use strict";
 
     /**
@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-let names = ['Randy', 'Shah', 'Oh', 'Pan'];
+    let names = ['Randy', 'Shah', 'Oh', 'Pan'];
 
     /**
      * TODO:
@@ -86,7 +86,7 @@ let names = ['Randy', 'Shah', 'Oh', 'Pan'];
 //      }
 
 
-    // }
+        // }
 
 
 //     2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
@@ -109,7 +109,7 @@ let names = ['Randy', 'Shah', 'Oh', 'Pan'];
 // ‘input num in input array’ if the second argument is an element in the first argument array
 //     otherwise, the function should return the string ‘input num NOT in input array’
 
-let array = [1,2,3,4,5,6,7]
+    let array = [1, 2, 3, 4, 5, 6, 7]
 
 
 // function checkIfNumInArray(number){
@@ -125,15 +125,5 @@ let array = [1,2,3,4,5,6,7]
 //
 // checkIfNumInArray(2);
 
-    function inArray(needle, haystack) {
-        var length = array.length;
-        for (var i = 0; i < length; i++) {
-            if (array[i] == needle)
-                return true;
-        }
-        return false;
-    }
 
-    inArray(1)
-})();
 

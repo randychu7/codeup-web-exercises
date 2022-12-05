@@ -55,14 +55,17 @@
         //Create a program (Function?) To find out who spent over $200.
         // Use a forEach loop to log each person
 
-        var discountedPrice =(function() {
-           if (shoppers.amount > 200) {
-                shoppers.amount *= 0.12;
-            }
-
+        let discountedPrice = shoppers.filter((shopper) => {
+        if (shopper.amount > 200){
+            return shopper.amount *= 0.88;
+        }
         });
-    console.log(shoppers.forEach(discountedPrice));
 
+    console.log(discountedPrice)
+
+        function shoppersDiscount(){
+            console.log()
+        }
 
 
     /** TODO:

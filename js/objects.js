@@ -119,20 +119,20 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
-
-    shoppers.forEach(function (user){
-        if(user.amount > 200){
-            console.log(`${user.name} spent ${user.amount} and gets a 12% discount, their total amount after the discount is ${user.amount * 0.88}`)
-        }else{
-            console.log(`${user.name} did not get a discount`);
-        }
-    })
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    //
+    // shoppers.forEach(function (user){
+    //     if(user.amount > 200){
+    //         console.log(`${user.name} spent ${user.amount} and gets a 12% discount, their total amount after the discount is ${user.amount * 0.88}`)
+    //     }else{
+    //         console.log(`${user.name} did not get a discount`);
+    //     }
+    // })
 
 
 
@@ -203,10 +203,12 @@
         },
 
     ]
+    // console.log(books[0].name)
 
-    books.forEach(function (book,index){
-        console.log(`Book #${index+1}| Book name: ${book.name}| Author ${book.authorFirstName} ${book.authorLastName}`);
-    })
+
+    // books.forEach(function (book,index){
+    //     console.log(`Book #${index+1}| Book name: ${book.name}| Author ${book.authorFirstName} ${book.authorLastName}`);
+    // })
 
     /**
      * Bonus:
@@ -219,24 +221,46 @@
      *   `showBookInfo` function.
      */
 
-function createBook(){
-        let bookCreated = prompt("What is the book title?");
-        let authorName = prompt("What is the authors First Name?");
-        let authorLast = prompt("What is author last name?");
-        books.push({name:bookCreated, authorFirstName: authorName, authorLastName: authorLast});
+function createBook(bookCreated, authorName, authorLast){
+        // let bookCreated = prompt("What is the book title?");
+        // let authorName = prompt("What is the authors First Name?");
+        // let authorLast = prompt("What is author last name?");
+        books.push({
+            name:bookCreated,
+            authorFirstName: authorName,
+            authorLastName: authorLast});
+        }
 
-    }
-    let newBook = createBook();
+    createBook('bob','builder','chu');
+    //console.log(books);
 
-console.table(books);
-
-function showBookInfo(){
-    let input = prompt("What book would you like to know about?")
-    if (input == books.name){
-        console.log(books.name)
+function showBookInfo(bookSelect) {
+    // let bookSelect = prompt("What book would you like to know about?");
+    for (let i = 0; i < books.length; i++) {
+        if (bookSelect.toLowerCase() === books[i].name.toLowerCase()) {
+            console.log((`Title ${books[i].name} Written By ${books[i].authorFirstName} ${books[i].authorLastName}`));
+        }
     }
 }
-showBookInfo();
+
+showBookInfo("21");
+
+
+// console.table(books);
+
+// const search = what => books.find(element => element.name === what);
+// const info = search("")
+//
+// function showBookInfo(){
+//
+//     let input = prompt("What book would you like to know about?")
+//     const search = what => books.find(element => element.name === what);
+//     const info = search(input)
+//     if (info){
+//         console.table(books);
+//     }
+// }
+// showBookInfo();
 
 
 
@@ -362,4 +386,6 @@ showBookInfo();
 //             longestName = user.givenName;
 //         }
 //     })
+
+
 })();

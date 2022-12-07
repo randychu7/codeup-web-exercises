@@ -1,5 +1,77 @@
 (function() {
     "use strict";
+/**-
+  What is a JS object?
+ A data structure with multiple keys
+
+ - What is the practical difference between these two statements?
+ someObject.someProperty = 4;
+ someObject[‘someProperty’] = 4;
+
+ - Are JS objects mutable?
+ yes
+ - Given the following code, what will be logged and why?
+ var objA = {a: 1, b: 2};
+ var objB = objA;
+ objA.a = 7;
+ a would now be 7
+
+ console.log(objB.a);
+ - Is it possible to nest another object inside of an object?
+ Yes
+ - Is it possible to nest an array in an object?
+ Yes
+ - What does ‘this’ refer to within an object method in JS?
+ This refers to the object
+ */
+//
+// var beverages = [
+//     {
+//         name: 'Dr.Pepper',
+//         type: 'Soda',
+//         volumeInLiters: '1',
+//         priceInCents: 120,
+//         expirationDate: '2023',
+//         datesOfPreviousSips:['Dec 15','Dec 20','Dec 25'],
+//         isOpen:'Yes'
+//     },
+//     {
+//         name: 'Sprite',
+//         type: 'Soda',
+//         volumeInLiters: '1',
+//         priceInCents: 180,
+//         expirationDate: '2023',
+//         datesOfPreviousSips: 'None',
+//         isOpen:'No'
+//     },
+//     {
+//         name: 'Fanta',
+//         type: 'Soda',
+//         volumeInLiters: '1',
+//         priceInCents: 210,
+//         expirationDate: '2023',
+//         datesOfPreviousSips: 'None',
+//         isOpen:'No'
+//     }
+// ]
+//     console.table(beverages);
+//
+// beverages.forEach(function (element){
+//     element.isClose = "True";
+//     })
+// console.table(beverages);
+
+// var car = {};
+//     car.make = "Toyota",
+//     car.model = "Camry"
+//
+// // create a logMakeModel method on the car object
+//     car.logMakeModel = function () {
+//         console.log("Car make/model is: " + this.make + " " + this.model);
+//     };
+//
+// // log the make/model
+//     car.logMakeModel();
 
     /**
      * TODO:
@@ -52,20 +124,17 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-        //Create a program (Function?) To find out who spent over $200.
-        // Use a forEach loop to log each person
 
-        let discountedPrice = shoppers.filter((shopper) => {
-        if (shopper.amount > 200){
-            return shopper.amount *= 0.88;
+
+    shoppers.forEach(function (user){
+        if(user.amount > 200){
+            console.log(`${user.name} spent ${user.amount} and gets a 12% discount, their total amount after the discount is ${user.amount * 0.88}`)
+        }else{
+            console.log(`${user.name} did not get a discount`);
         }
-        });
+    })
 
-    console.log(discountedPrice)
 
-        function shoppersDiscount(){
-            console.log()
-        }
 
 
     /** TODO:
@@ -106,6 +175,39 @@
      *      ...
      */
 
+    let books = [
+        {
+            name: "Harry Potter",
+            authorFirstName: "J.K",
+            authorLastName: "Rowling",
+        },
+        {
+            name: "Da Vinci Code",
+            authorFirstName:"Dan",
+            authorLastName: "Brown",
+        },
+        {
+            name: "Fifty Shades of Grey",
+            authorFirstName: "James",
+            authorLastName: "Lel"
+        },
+        {
+            name: "Bob the Builder",
+            authorFirstName: "Bob",
+            authorLastName: "Bobby"
+        },
+        {
+            name: "21",
+            authorFirstName: "Jog",
+            authorLastName: "Ger"
+        },
+
+    ]
+
+    books.forEach(function (book,index){
+        console.log(`Book #${index+1}| Book name: ${book.name}| Author ${book.authorFirstName} ${book.authorLastName}`);
+    })
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -117,4 +219,147 @@
      *   `showBookInfo` function.
      */
 
+function createBook(){
+        let bookCreated = prompt("What is the book title?");
+        let authorName = prompt("What is the authors First Name?");
+        let authorLast = prompt("What is author last name?");
+        books.push({name:bookCreated, authorFirstName: authorName, authorLastName: authorLast});
+
+    }
+    let newBook = createBook();
+
+console.table(books);
+
+function showBookInfo(){
+    let input = prompt("What book would you like to know about?")
+    if (input == books.name){
+        console.log(books.name)
+    }
+}
+showBookInfo();
+
+
+
+
+
+    // books.forEach(function (book,index,array){
+    //
+    // })
+
+
+    // arryNames.push(names.givenName)
+
+    // const list = [
+    //     {
+    //         name: 'Michael Scott',
+    //         company: 'Dunder Mufflin',
+    //         designation: 'Regional Manager',
+    //         show: 'The Office'
+    //     },
+    //     {
+    //         name: 'Barney Stinson',
+    //         company: 'Golaith National Bank',
+    //         designation: 'Please',
+    //         show: 'How I met your mother'
+    //     },
+    //     {
+    //         name: 'Jake Peralta',
+    //         company: 'NYPD',
+    //         designation: 'Detective',
+    //         show: 'Brooklyn 99'
+    //     },
+    // ]
+    //
+    // // list.every(element => element.responsibility = 'making people laugh')
+    // list.every(function (element) {
+    //     element.responsibility = "making people laugh";
+    // });
+    // list.forEach(function (element) {
+    //     element.favCharacter = "true";
+    // });
+    // list.forEach(function (element) {
+    //     delete element.designation;
+    // });
+
+    // console.table(list);
+//
+//     const users = [
+//         {
+//                 givenName:'Sam',
+//                 age: 21
+//              },
+//             {
+//                 givenName: 'Cathy',
+//                 age: 32
+//             },
+//             {
+//                 givenName: "Karen",
+//                 age: 43
+//             }
+// ]
+//
+//
+// //     0. Log each given name
+//     console.log(users[0].givenName);
+//     console.log(users[1].givenName);
+//     console.log(users[2].givenName);
+//
+// //     1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+//
+//     // let arryNames = [];
+//     //
+//     //     for (var i = 0; i<users.givenName.length; i++ ){
+//     //         arryNames.push(users.givenName[i])
+//     //     }
+//
+//
+//         // users.forEach(function (names){
+//         //     arryNames.push(names.givenName)
+//         // })
+//     //
+//     // let addedNames = arryNames.join(" ");
+//     // console.log(addedNames);
+//
+// //     2. Change the names of all users to “John Doe”
+//     users.forEach(function (name){
+//         name.givenName = "John Doe"
+//     })
+//     console.log(users);
+// // 3. Increase the current age of all users by 1
+//
+// users.forEach(function (name){
+//    name.age += 1;
+//
+// })
+//     console.log(users);
+// //     Can you accomplish each step using iteration?
+//
+//     // how to get the total of all ages
+//    let totalAges = 0;
+//     users.forEach(function (user) {
+//         totalAges += user.age;
+//     });
+//
+//     users.forEach(function (user){
+//         console.log(`user: ${user.givenName}| ${user.age}`)
+//     })
+//
+//     // print users names that are older than 30
+//
+//     users.forEach(function (user){
+//         if (user.age > 30){
+//             console.log(user.givenName)
+//         }
+//     })
+//
+//     // longest string question
+//
+//     //Sam, Cathy, Karen
+//
+//     let longestName = [];
+//     users.forEach(function (user){
+//         if (user.givenName.length > longestName.length){
+//             longestName = user.givenName;
+//         }
+//     })
 })();

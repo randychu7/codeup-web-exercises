@@ -238,29 +238,50 @@ function usCurrency(dollar){
     // let authorName = prompt("What is the authors First Name?");
     // let authorLast = prompt("What is author last name?");
 
-function createBook(bookCreated, authorFirst, authorLast){
-        books.push({
+// function createBook(bookCreated, authorFirst, authorLast){
+//         books.push({
+//             name:bookCreated,
+//             author: {
+//             firstName: authorFirst,
+//             lastName: authorLast
+//                 }
+//              })
+//         }
+
+
+    //Create a function that creates an object
+    function createBook(bookCreated, author, date){
+    let authorArray = author.split(' ');
+    let bookObject = {
             name:bookCreated,
             author: {
-            firstName: authorFirst,
-            lastName: authorLast
-                }
-             })
-        }
+                firstName: authorArray[0],
+                lastName: authorArray[1],
 
-    createBook('bob','builder','chu');
-    console.log(books);
-
-function showBookInfo(bookSelect) {
-    // let bookSelect = prompt("What book would you like to know about?");
-    for (let i = 0; i < books.length; i++) {
-        if (bookSelect.toLowerCase() === books[i].name.toLowerCase()) {
-            console.log((`Title ${books[i].name} Written By ${books[i].firstName} ${books[i].lastName}`));
+            },
+            date: date
         }
+        return bookObject;
     }
-}
 
-showBookInfo("21");
+    let books2 = [
+        createBook('bob','chu'),
+        createBook('hello', 'dude')
+    ]
+    console.log(books2);
+
+
+
+// function showBookInfo(bookSelect) {
+//     // let bookSelect = prompt("What book would you like to know about?");
+//     for (let i = 0; i < books.length; i++) {
+//         if (bookSelect.toLowerCase() === books[i].name.toLowerCase()) {
+//             console.log((`Title ${books[i].name} Written By ${books[i].firstName} ${books[i].lastName}`));
+//         }
+//     }
+// }
+//
+
 
 
 // console.table(books);

@@ -328,7 +328,7 @@ showBookInfo("21");
 //     console.log(users[1].givenName);
 //     console.log(users[2].givenName);
 //
-// //     1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+//     1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
 //
 //     // let arryNames = [];
 //     //
@@ -344,7 +344,7 @@ showBookInfo("21");
 //     // let addedNames = arryNames.join(" ");
 //     // console.log(addedNames);
 //
-// //     2. Change the names of all users to “John Doe”
+//     2. Change the names of all users to “John Doe”
 //     users.forEach(function (name){
 //         name.givenName = "John Doe"
 //     })

@@ -83,13 +83,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-// var person = {
-//         firstName: "Randy",
-//         lastName: "Chu",
-//
-//     }
-//
-//     console.log(person.firstName);
+var person = {
+        firstName: "Randy",
+        lastName: "Chu",
+
+    }
+
+    console.log(person.firstName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -102,9 +102,14 @@
 // function sayHello(){
 //         console.log(`Hello from ${person.firstName} ${person.lastName}`);
 //     }
-//
-// sayHello();
 
+    person.sayHello = function (){
+        return `Hello from ${this.firstName} ${this.lastName}`
+    }
+//
+person.sayHello();
+
+    person.middleName = 'N/A'
 /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -118,21 +123,27 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+function usCurrency(dollar){
+        return dollar.toLocaleString('en-US',{style: 'currency',currency:'USD'})
+}
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    //
-    // shoppers.forEach(function (user){
-    //     if(user.amount > 200){
-    //         console.log(`${user.name} spent ${user.amount} and gets a 12% discount, their total amount after the discount is ${user.amount * 0.88}`)
-    //     }else{
-    //         console.log(`${user.name} did not get a discount`);
-    //     }
-    // })
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+    shoppers.forEach(function (user){
+        if(user.amount > 200){
+            let savings = parseFloat(user.amount) * .12;
+            let total = parseFloat(user.amount) - (savings) ;
+
+            console.log(`${user.name} spent ${usCurrency(user.amount)} and gets a 12% discount, their total amount after the discount is ${usCurrency(total)}, they saved ${usCurrency(savings)}`)
+        }else{
+            console.log(`${user.name} did not get a discount`);
+        }
+    })
 
 
 
@@ -178,37 +189,40 @@
     let books = [
         {
             name: "Harry Potter",
-            authorFirstName: "J.K",
-            authorLastName: "Rowling",
+            author:{
+                firstName: "J.K",
+                lastName: "Rowling",
+            }
         },
         {
             name: "Da Vinci Code",
-            authorFirstName:"Dan",
-            authorLastName: "Brown",
+            author: {
+                firstName: "Dan",
+                authorLastName: "Brown",
+            }
         },
         {
             name: "Fifty Shades of Grey",
-            authorFirstName: "James",
-            authorLastName: "Lel"
+            author: {
+                firstName: "John",
+                lastName: "Jean"
+            }
         },
         {
             name: "Bob the Builder",
-            authorFirstName: "Bob",
-            authorLastName: "Bobby"
-        },
-        {
-            name: "21",
-            authorFirstName: "Jog",
-            authorLastName: "Ger"
-        },
-
+            author: {
+                firstName: "Bob",
+                lastName: "builder",
+            }
+        }
     ]
+
     // console.log(books[0].name)
 
 
-    // books.forEach(function (book,index){
-    //     console.log(`Book #${index+1}| Book name: ${book.name}| Author ${book.authorFirstName} ${book.authorLastName}`);
-    // })
+    books.forEach(function (book,index){
+        console.log(`Book #${index+1} \n Book name: ${book.name}\n Author: ${book.author.firstName} ${book.author.lastName}\n----------------------------`);
+    })
 
     /**
      * Bonus:
@@ -220,25 +234,28 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    // let bookCreated = prompt("What is the book title?");
+    // let authorName = prompt("What is the authors First Name?");
+    // let authorLast = prompt("What is author last name?");
 
-function createBook(bookCreated, authorName, authorLast){
-        // let bookCreated = prompt("What is the book title?");
-        // let authorName = prompt("What is the authors First Name?");
-        // let authorLast = prompt("What is author last name?");
+function createBook(bookCreated, authorFirst, authorLast){
         books.push({
             name:bookCreated,
-            authorFirstName: authorName,
-            authorLastName: authorLast});
+            author: {
+            firstName: authorFirst,
+            lastName: authorLast
+                }
+             })
         }
 
     createBook('bob','builder','chu');
-    //console.log(books);
+    console.log(books);
 
 function showBookInfo(bookSelect) {
     // let bookSelect = prompt("What book would you like to know about?");
     for (let i = 0; i < books.length; i++) {
         if (bookSelect.toLowerCase() === books[i].name.toLowerCase()) {
-            console.log((`Title ${books[i].name} Written By ${books[i].authorFirstName} ${books[i].authorLastName}`));
+            console.log((`Title ${books[i].name} Written By ${books[i].firstName} ${books[i].lastName}`));
         }
     }
 }
@@ -247,7 +264,6 @@ showBookInfo("21");
 
 
 // console.table(books);
-
 // const search = what => books.find(element => element.name === what);
 // const info = search("")
 //

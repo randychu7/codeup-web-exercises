@@ -158,13 +158,37 @@
 //
 // console.log(toLowerCase('HELLO'));
 
-function hasLowerCase(string){
-    if(string == string.toLowerCase()){
-        return true;
-    } else {
-    return false;
-    }
+// function hasLowerCase(string){
+//     if(string == string.toLowerCase()){
+//         return true;
+//     } else {
+//     return false;
+//     }
+// }
+//
+// var alphabet = [];
+// function isPan() {
+//
+//     for (var i = 65; i <= 90; i++) {
+//         alphabet.push(String.fromCharCode(i));
+//     }
+// }
+// console.log(alphabet)
+// //
+
+
+function isPangram(string) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let splitString = string.toLowerCase().replace(/[., 0-9]/g, '').split('').sort().join('');
+    let noRepeats = splitString.replace(/(.)\1+/g, "$1");
+    console.log(noRepeats)
+
+        if (noRepeats == alphabet){
+            return true;
+        }else {
+            return false;
+        }
+
 }
 
-console.log(hasLowerCase("hello"));
-
+console.log(isPangram(" abcdefghijklmnopqrstuvwxyz"))

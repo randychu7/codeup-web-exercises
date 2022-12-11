@@ -206,26 +206,50 @@
 // console.log(count);
 
 
-function xO (input){
-    input = input.toLowerCase();
-    let countO = 0;
-    let countX = 0;
-    for (let i = 0; i < input.length; i++) {
-        if (input.charAt(i) == "o") {
-            countO++;
-        }
-        for (let j = 0; i <input.length; i++){
-            if (input.charAt(i) == "x"){
-                countX++;
-            }
-        }if (countX === countO){
-            return true;
-        }else {
-            return false;
-        }
-    }
-}
+// function xO (input){
+//     input = input.toLowerCase();
+//     let countO = 0;
+//     let countX = 0;
+//     for (let i = 0; i < input.length; i++) {
+//         if (input.charAt(i) == "o") {
+//             countO++;
+//             console.log(countO)
+//         }
+//         for (let j = 0; i <input.length; i++){
+//             if (input.charAt(i) == "x"){
+//                 countX++;
+//                 console.log(countX)
+//             }
+//         }if (countX === countO){
+//             return true;
+//         }else {
+//             return false;
+//         }
+//     }
+// }
 
+// console.log(xO('xoxxo'))
+//
+// function xO(input) {
+//     var x = 0;
+//     var o = 0;
+//     for (var i = 0; i < input.length; i++) {
+//         if (input.charAt(i) == "x") {
+//             x++;
+//         } else if (input.charAt(i) == "o") {
+//             o++;
+//         }if (typeof input === 'boolean'){
+//             return true;
+//         }
+//     }
+//     if (x == o) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//
+// console.log(xO(false))
 // We are interested in Harshad numbers where the product of its digit sum s and s with the digits reversed, gives the original number n. For example consider number 1729:
 //
 // its digit sum, s = 1 + 7 + 2 + 9 = 19

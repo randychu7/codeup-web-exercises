@@ -302,9 +302,33 @@
 // ‘input num in input array’ if the second argument is an element in the first argument array
 // otherwise, the function should return the string ‘input num NOT in input array’
 
+// function reverseWords(str) {
+//     let reversedStr = str.split('').reverse();
+//     let arry = [];
+//
+//     for (var i = reversedStr.length - 1; i >= 0; i--) {
+//
+//         return arry.unshift(reversedStr[i]);
+//
+//     }
+//
+//
+// }
 function reverseWords(str) {
-    let reversedStr = str.split('').reverse().join('');
-    return reversedStr.split('').reverse().;
+    str = str.split('');
+    console.log(str);
+    let arr = [];
+    for (var i = str.length - 1; i >= 0; i--) {
+        arr.push(str[i]);}
+   return arr.join('').split(' ').reverse().join(' ');
+    }
 
-}
+
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+//
+// str = [1,2,3,4,5]
+// var arr = [];
+// for (var i = str.length - 1; i >= 0; i--) {
+//     arr.push(str[i]);}
+//
+// console.log(arr);

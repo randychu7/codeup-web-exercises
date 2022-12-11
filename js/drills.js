@@ -217,7 +217,14 @@ function total(arr) {
         let add1 = arr[0] + arr[1];
         let add2 = arr[1] + arr[2];
         let add3 = arr[2] + arr[3];
-        let added1 = add1 + add2
+        let added1 = add1 + add2;
+        let added2 = add3 + 5;
+
+        return added1 + added2;
+    }else if(arr.length === 3){
+        let sumAdd1 = arr[0] + arr[1];
+        let sumAdd2 = arr[1]+ arr[2];
+        return sumAdd1 + sumAdd2;
     }
 }
 

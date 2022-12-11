@@ -314,21 +314,39 @@
 //
 //
 // }
-function reverseWords(str) {
-    str = str.split('');
-    console.log(str);
-    let arr = [];
-    for (var i = str.length - 1; i >= 0; i--) {
-        arr.push(str[i]);}
-   return arr.join('').split(' ').reverse().join(' ');
-    }
-
-
-console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+// function reverseWords(str) {
+//     str = str.split('');
+//     console.log(str);
+//     let arr = [];
+//     for (var i = str.length - 1; i >= 0; i--) {
+//         arr.push(str[i]);}
+//    return arr.join('').split(' ').reverse().join(' ');
+//     }
 //
+//
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+// //
 // str = [1,2,3,4,5]
 // var arr = [];
 // for (var i = str.length - 1; i >= 0; i--) {
 //     arr.push(str[i]);}
 //
 // console.log(arr);
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+function createPhoneNumber(numbers) {
+    var str = '';
+    for (var i = 0; i < numbers.length; i++) {
+        if (i === 0) {
+            str += '(' + numbers[i];
+        } else if (i === 2) {
+            str += numbers[i] + ') ';
+        } else if (i === 5) {
+            str += numbers[i] + '-';
+        } else {
+            str += numbers[i];
+        }
+    }
+    return str;
+}
+console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9]));

@@ -193,6 +193,39 @@
 //
 // console.log(isPangram(" abcdefghijklmnopqrstuvwxyz"))
 
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+//
+//     Examples input/output:
+// var str = "Hello World";
+// var count = 0;
+// for (var i = 0; i < str.length; i++) {
+//     if (str.charAt(i) == "l") {
+//         count++;
+//     }
+// }
+// console.log(count);
+
+
+function xO (input){
+    input = input.toLowerCase();
+    let countO = 0;
+    let countX = 0;
+    for (let i = 0; i < input.length; i++) {
+        if (input.charAt(i) == "o") {
+            countO++;
+        }
+        for (let j = 0; i <input.length; i++){
+            if (input.charAt(i) == "x"){
+                countX++;
+            }
+        }if (countX === countO){
+            return true;
+        }else {
+            return false;
+        }
+    }
+}
+
 // We are interested in Harshad numbers where the product of its digit sum s and s with the digits reversed, gives the original number n. For example consider number 1729:
 //
 // its digit sum, s = 1 + 7 + 2 + 9 = 19

@@ -200,11 +200,34 @@
 // and 19 * 91 = 1729 --> the number that we started with.
 // Complete the function which tests if a positive integer n is Harshad number, and returns True if the product of its digit sum and its digit sum reversed equals n; otherwise return False.
 
-function numberJoy(n) {
-    // n = parseFloat(n);
-    console.log(n);
-    let sumDigits = n.split();
-    console.log(sumDigits)
+
+function total(arr) {
+    if (arr.length === 5){
+        let sum1 = arr[0]+arr[1];
+        let sum2 = arr[1]+arr[2];
+        let sum3 = arr[2]+arr[3];
+        let sum4 = arr[3]+arr[4];
+        let sumA = sum1 + sum2;
+        let sumB = sum3 + sum4;
+        let sumC = sum2 + sum3;
+
+        return (sumA + sumC) + (sumB+sumC);
+
+    }else if(arr.length ===4){
+        let add1 = arr[0] + arr[1];
+        let add2 = arr[1] + arr[2];
+        let add3 = arr[2] + arr[3];
+        let added1 = add1 + add2
+    }
 }
 
-console.log(numberJoy(1994))
+console.log(total([1,2,3,4]));
+
+// function numberJoy(n) {
+//     // n = parseFloat(n);
+//     console.log(n);
+//     let sumDigits = n.split();
+//     console.log(sumDigits)
+// }
+//
+// console.log(numberJoy(1994))

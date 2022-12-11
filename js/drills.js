@@ -200,35 +200,35 @@
 // and 19 * 91 = 1729 --> the number that we started with.
 // Complete the function which tests if a positive integer n is Harshad number, and returns True if the product of its digit sum and its digit sum reversed equals n; otherwise return False.
 
-
-function total(arr) {
-    if (arr.length === 5){
-        let sum1 = arr[0]+arr[1];
-        let sum2 = arr[1]+arr[2];
-        let sum3 = arr[2]+arr[3];
-        let sum4 = arr[3]+arr[4];
-        let sumA = sum1 + sum2;
-        let sumB = sum3 + sum4;
-        let sumC = sum2 + sum3;
-
-        return (sumA + sumC) + (sumB+sumC);
-
-    }else if(arr.length ===4){
-        let add1 = arr[0] + arr[1];
-        let add2 = arr[1] + arr[2];
-        let add3 = arr[2] + arr[3];
-        let added1 = add1 + add2;
-        let added2 = add3 + 5;
-
-        return added1 + added2;
-    }else if(arr.length === 3){
-        let sumAdd1 = arr[0] + arr[1];
-        let sumAdd2 = arr[1]+ arr[2];
-        return sumAdd1 + sumAdd2;
-    }
-}
-
-console.log(total([1,2,3,4]));
+//
+// function total(arr) {
+//     if (arr.length === 5){
+//         let sum1 = arr[0]+arr[1];
+//         let sum2 = arr[1]+arr[2];
+//         let sum3 = arr[2]+arr[3];
+//         let sum4 = arr[3]+arr[4];
+//         let sumA = sum1 + sum2;
+//         let sumB = sum3 + sum4;
+//         let sumC = sum2 + sum3;
+//
+//         return (sumA + sumC) + (sumB+sumC);
+//
+//     }else if(arr.length ===4){
+//         let add1 = arr[0] + arr[1];
+//         let add2 = arr[1] + arr[2];
+//         let add3 = arr[2] + arr[3];
+//         let added1 = add1 + add2;
+//         let added2 = add3 + 5;
+//
+//         return added1 + added2;
+//     }else if(arr.length === 3){
+//         let sumAdd1 = arr[0] + arr[1];
+//         let sumAdd2 = arr[1]+ arr[2];
+//         return sumAdd1 + sumAdd2;
+//     }
+// }
+//
+// console.log(total([1,2,3,4]));
 
 // function numberJoy(n) {
 //     // n = parseFloat(n);
@@ -238,3 +238,9 @@ console.log(total([1,2,3,4]));
 // }
 //
 // console.log(numberJoy(1994))
+
+// 1. Create an array of 10 foods. Write using a for loop, write logic that will log only the foods that start with a vowel. Write another solution using a forEach loop.
+// 2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
+// 3. Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+// ‘input num in input array’ if the second argument is an element in the first argument array
+// otherwise, the function should return the string ‘input num NOT in input array’

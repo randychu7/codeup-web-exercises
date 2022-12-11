@@ -349,15 +349,32 @@
 //     }
 //     return str;
 // }
+//
+// function createPhoneNumber(numbers){
+//     var format = "(xxx) xxx-xxxx";
+//
+//     for(var i = 0; i < numbers.length; i++)
+//     {
+//         format = format.replace('x', numbers[i]);
+//     }
+//
+//     return format;
+// }
+// console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9]));
 
-function createPhoneNumber(numbers){
-    var format = "(xxx) xxx-xxxx";
-
-    for(var i = 0; i < numbers.length; i++)
-    {
-        format = format.replace('x', numbers[i]);
-    }
-
-    return format;
-}
-console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9]));
+// function maskify(cc) {
+//     let str = "";
+//     for (var i = 0; i < cc.length; i++) {
+//         if (i < cc.length - 4) {
+//             str += '#'
+//         } else {
+//             str += cc[i];
+//         }
+//         return str;
+//     }
+// // }
+// function maskify(cc) {
+//     return cc.replace(/.(?=.{4})/g, "#");
+// }
+//
+// console.log(maskify('123321231231231'))

@@ -1,0 +1,41 @@
+* { /* star symbol selects everything */
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{ /* will send all the divs into a column*/
+    background: grey;
+    display: flex;
+    flex-direction: column;     /*Moving the divs vertically*/
+    align-items: center;
+    padding: 10px;
+}
+.container.header-container{ /* If there are two classes*/
+        background-color: black;
+        color: white;
+}
+
+.header-container .row{ /* The space makes it so that any parent with a children of row*/
+
+}
+
+.row{
+    background-color: red ;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: green;
+}

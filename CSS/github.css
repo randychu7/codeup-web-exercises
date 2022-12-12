@@ -1,6 +1,6 @@
-* { /* star symbol selects everything */
-    margin: 0;
-    padding: 0;
+* {
+    margin:0;
+    padding:0;
 }
 
 .page-wrapper {
@@ -9,33 +9,44 @@
     min-height: 100vh;
 }
 
-.container{ /* will send all the divs into a column*/
-    background: grey;
-    display: flex;
-    flex-direction: column;     /*Moving the divs vertically*/
+.container {
+    display:flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.container.header-container {
+    background-color:#000000;
+    color: #fff;
     padding: 10px;
 }
-.container.header-container{ /* If there are two classes*/
-        background-color: black;
-        color: white;
-}
 
-.header-container .row{ /* The space makes it so that any parent with a children of row*/
-
-}
-
-.row{
-    background-color: red ;
-    display: flex;
+.row {
+    display:flex;
     width: 100%;
-    max-width: 900px;
-    padding: 10px;
+    max-width:900px;
+}
+
+.header-container .row {
+    column-gap: 30px;
 }
 
 .column {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    flex-grow: 1;
-    background-color: green;
+    flex-grow:1;
+}
+
+.header-container .column {
+    justify-content:center;
+}
+
+.column.col-shrink {
+    flex-grow:unset;
+    flex-shrink:1;
+}
+
+.header-container ul li{
+font-weight: 600;
+    color: #4e4e4e;
 }

@@ -6,64 +6,124 @@
 </head>
 <body>
 <main>
-        <form method = "POST" action = "https://request-inspector.glitch.me/">
-            <label for = "username">Username</label>
-            <input id = "username"
-                   name = "username"
-                   type = "text"
-                   placeholder="Enter Username"
-                   value="" >
-            <br>
-            <label for = "email">Email</label>
-            <input id = "email" type="text" name="email" placeholder="Enter Email">
-            <br>
-            <label for="bio">Enter your bio</label><br>
-            <textarea name = "bio" id="bio" type = "text" placeholder="Enter Bio">
-            </textarea>
+<!--        <form method = "POST" action = "https://request-inspector.glitch.me/">-->
+<!--            <label for = "username">Username</label>-->
+<!--            <input id = "username"-->
+<!--                   name = "username"-->
+<!--                   type = "text"-->
+<!--                   placeholder="Enter Username"-->
+<!--                   value="" >-->
+<!--            <br>-->
+<!--            <label for = "email">Email</label>-->
+<!--            <input id = "email" type="text" name="email" placeholder="Enter Email">-->
+<!--            <br>-->
+<!--            <label for="bio">Enter your bio</label><br>-->
+<!--            <textarea name = "bio" id="bio" type = "text" placeholder="Enter Bio">-->
+<!--            </textarea>-->
 
-            <p>How did you hear about us?</p>
+<!--            <p>How did you hear about us?</p>-->
+<!--            <label for="billboard">-->
+<!--           <input type="radio" id = "billboard" name="question1" value="billboard">Billboard<br>-->
+<!--            </label>-->
+<!--            <label for = "radio advertisement">-->
+<!--             <input type="radio" id = "radio advertisement" name="question1" value="radio advertisement">Radio<br>-->
+<!--            </label>-->
+<!--            <label for = "internet advertisement">-->
+<!--             <input type="radio" id = "internet advertisement" name="question1" value="internet advertisement">Internet<br>-->
+<!--            </label>-->
 
-           <input type="radio" name="question1" value="billboard">Billboard<br>
-             <input type="radio" name="question1" value="radio advertisement">Radio<br>
-             <input type="radio" name="question1" value="internet advertisement">Internet<br>
+<!--            <p>What web browser are you using?</p>-->
+<!--            <select name="Web browser">-->
+<!--                <option value="Chrome">Chrome</option>-->
+<!--                <option value="IE">Internet Explorer</option>-->
+<!--                <option value="Safari">Safari</option>-->
+<!--            </select>-->
+<!--            <br>-->
+<!--            <br>-->
+
+<!--            <button>Submit</button>-->
+
+<!--        </form>-->
+
+<!--</main>-->
+
+    <form method = "POST" action = "https://request-inspector.glitch.me/">
+
+        <p><strong>Your Name</strong> <span style="color: red">*</span></p>
+        <input id = "firstName"
+               name = "firstName"
+               type = "text"
+               placeholder="Enter first name"
+               >
+
+        <input id = "last-name"
+               type="text"
+               name="last-name"
+               placeholder="Enter last name">
 
 
-            <p>What web browser are you using?</p>
-            <select name="Web browser">
-                <option value="Chrome">Chrome</option>
-                <option value="IE">Internet Explorer</option>
-                <option value="Safari">Safari</option>
-            </select>
-            <br>
-            <br>
+        <br><label for = "firstName">First Name</label>
+        <label for = "last-name">Last name</label>
 
-            <button>Submit</button>
 
-        </form>
+        <br>
+        <br>
+
+
+        <label for="business-name"><strong>Business Name <span style="color: red">*</span> </strong> </label>
+        <br>
+        <br>
+        <input id="business-name"
+                type="text"
+                name="business-name"
+                placeholder="Enter business name">
+
+        <p><strong>E-mail</strong> <span style="color: red">*</span></p>
+        <label for="email">
+            <input id="email" type = "text" name="email" placeholder="ex: myname@example.com">
+        </label>
+        <p><span style="font-size: 10px">myname@example.com</span></p>
+
+        <p><strong>Phone Number</strong><span style="color: red">*</span></p>
+        <label for="phone-number">
+            <input id="phone-number" type = "number" name="phone-number" placeholder="(000)000-0000">
+        </label>
+
+
+        <p><strong>City where you are located</strong><span style="color: red">*</span></p>
+        <label for="city">
+            <input id="city" type = "text" name="city" placeholder="">
+        </label>
+
+        <p><strong>List the product(s) you will be selling</strong><span style="color: red">*</span></p>
+        <label for="selling-textarea">
+            <textarea id="selling-textarea" type = "text" name="selling-textarea" placeholder="Type here..."></textarea>
+        </label>
+
+        <p>Special Requests</p>
+        <label for="requests">
+            <input id="requests" type = "text" name="requests" placeholder="">
+        </label>
+        <br>
+        <br>
+
+        <p><strong>Terms & Conditions</strong></p>
+
+        <p>
+
+            I hereby agree and give my permission for Rise Asset Development and/or partners to record, film,photograph, audiotape or videotape myself (hereinafter collectively referred to as “Works”) and to display, publish or distribute these Works for the purpose of publishing, posting on the Rise Asset Development website and posting on social media sites. I hereby waive any right to approve the use of these Works now or in the future, whether the use is known to me or unknown, and I waive any right to any royalties related to the use of these Works. I understand that the Works may appear in electronic form on the internet or in other publications outside of the Rise Asset Development’s control. I agree that I will not hold the Rise Asset Development responsible for any harm that may arise from such unauthorized reproduction.</p>
+
+
+
+        <label for="date">
+            <input id="date" type = "number" name="date" placeholder="12/12/2022">
+        </label>
+        <br>
+
+        <button>Submit</button>
+
+    </form>
 
 </main>
-
-
-
-
-
-
-<!--        <div>-->
-<!--        <form method="POST" action="https://request-inspector.glitch.me/">-->
-<!--          <input type="text" name="email" placeholder="Enter your email address"> -->
-<!--          <input type="password" name="password"> <br>-->
-<!--         <textarea name = "bio">-->
-
-<!--        </textarea>-->
-<!--        </form>-->
-<!--        </div>-->
-
-<!--        <h2> How did you hear about us?</h2>-->
-<!--       <div>-->
-<!--            <input>-->
-
-
-<!--       </div>-->
-
 </body>
 </html>

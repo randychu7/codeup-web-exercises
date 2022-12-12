@@ -378,3 +378,29 @@
 // }
 //
 // console.log(maskify('123321231231231'))
+//
+// function highAndLow(numbers){
+//     numbers = numbers.split(' ');
+//     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+// }
+// console.log(highAndLow(1 2 5))
+//
+// function sortArray(array) {
+//
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] % 2 !== 0){
+//             return array.sort()
+//         }else { return array[i]
+//         }
+//     }
+// }
+//
+// console.log(sortArray([1,13,2,4,7,3]))
+
+function solution(str, ending){
+    if(str.slice(-3) === ending){
+        return true;
+    }
+    else {return false;
+
+    }}

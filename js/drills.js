@@ -397,10 +397,53 @@
 //
 // console.log(sortArray([1,13,2,4,7,3]))
 
-function solution(str, ending){
-    if(str.slice(-3) === ending){
-        return true;
-    }
-    else {return false;
+// function solution(str, ending){
+//     if(str.slice(-3) === ending){
+//         return true;
+//     }
+//     else {return false;
+//
+//     }}
 
-    }}
+// Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
+
+    const pets = [
+    {
+        name: 'Sparky',
+        type: 'Fish',
+        age: 4
+    },
+    {
+        name: 'Mr. Pig',
+        type: 'Cat',
+        age: 4
+    },
+    {
+        name: 'Bubba',
+        type: 'Dog',
+        age: 5
+    },
+    {
+        name: 'Pickles',
+        type: 'Dog',
+        age: 10
+    }
+];
+
+// function avgAge(){
+//     let avgAge = 0;
+//     for(i=0; i<pets.length; i++){
+//         avgAge += pets[i].age;
+//         return avgAge/pets[i];
+//     }
+// }
+
+function avgAge(){
+    let avgAge = 0;
+    for(let i=0; i<pets.length; i++){
+        avgAge += pets[i].age;
+    }
+    return avgAge/pets.length;
+}
+
+console.log(avgAge());

@@ -5,11 +5,47 @@ body{
     border: 0;
 }
 
-.nav-row{
-    width: 120px;
-    float: left;
+.page-wrapper{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
 
 }
+/* ================Navigation============================*/
+.nav-row {
+    width: 120px;
+    float: left;
+}
+
+.name-nav{
+    padding-left: 12px;
+    padding-top: 20px;
+    color: white;
+    font-size: 8px;
+}
+
+.nav-column{
+    height: 500px;
+    background-color: #c55244;
+    width: 100px;
+    margin-top: 30px;
+
+}
+
+.nav-content{
+    color: white;
+    font-size: 6px;
+    list-style: none;
+    padding: 10px;
+
+}
+.nav-content>*{
+    padding: 2px;
+}
+
+/* ================Title============================*/
+
 .title-row{
     font-family: "Trebuchet MS";
     margin-top: 6px;
@@ -24,43 +60,21 @@ body{
     right: 212.7px;
     top: 50px;
 }
+
 .divider{
     top: 80px;
     right: 255px;
     width: 16px;
-    height: 3px;
+    height: 2.5px;
     border-radius: 3px;
     background-color: #c55244;
 }
-
-
-.name-nav{
-    padding-left: 10px;
-    padding-top: 20px;
-    color: white;
-    font-size: 10px;
+.images{
+    width: 120px;
 }
 
-.nav-column{
-    /*box-sizing: border-box;*/
-    /*position: fixed;*/
-    flex-direction: row ;
-    height: 500px;
-    background-color: #c55244;
-    width: 100px;
-    margin-top: 30px;
 
+.atrium{
+    width: 120px;
+    display: flex;
 }
-
-.nav-content{
-    margin-top: 15px;
-    color: white;
-    font-size: 8px;
-    list-style: none;
-    padding: 10px;
-
-}
-.nav-content>*{
-    padding: 2px;
-}
-

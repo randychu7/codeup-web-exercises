@@ -1,3 +1,38 @@
 .fancy-header{
+    box-sizing: border-box;
     color: purple;
+    text-align: center;
+
+}
+
+body{
+    background-color: grey;
+    background-image: url("/Images/Mercedes.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    background-attachment: fixed;
+    font-family: ".SF NS";
+
+}
+
+table{
+    border-collapse: collapse;
+
+}
+
+.cell-highlighted{
+    background-color: gold;
+    color: black;
+    font-family: "Academy Engraved LET";
+
+}
+
+th, td{
+border: 1px solid black;
+    padding: 5px;
+}
+
+thead{
+    color: white;
+    background-color: black;
 }

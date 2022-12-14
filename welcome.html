@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Intro to HTML</title>
-    <style>
-        tr{
-            border: 1px solid #000000;
-        }
-        td{
-            border: 1px solid #000000;
-        }
-    </style>
+
+    <link rel="stylesheet" href="CSS/hover-effects.css">
   <link rel = "stylesheet" href="CSS/style.css">  <!-- Fabvion(Icon) goes here-->
 </head>
 <body>
@@ -48,6 +42,7 @@
                                     <img src="Images/hello.jpg" width="300"  alt="coffee">
                                     <img src="Images/girl2.jpg" width="300"  alt="girl2">
 
+                    <div class="table">
                             <h2>Our Product</h2>
                                     <table>
                                             <thead>
@@ -65,19 +60,19 @@
                                                     </tr>™️
                                                     <tr>
                                                         <td>Advanced</td>
-                                                        <td>$199</td>
+                                                        <td class = "cell-highlighted">$199</td>
                                                         <td>Additional Features</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Premium</td>
-                                                        <td>$499</td>
+                                                        <td class = "cell-highlighted">$499</td>
                                                         <td>Unlimited Support</td>
                                                     </tr>
                                             </tbody>
                                     </table>
-
+                    </div>
                             <p><em>All Products come with our quality gaurantee™.</em></p>
-                              <a href="#"><strong>Go to the top of the page</strong></a>
+                              <a class="button hvr-bounce-to-top" href="#"><strong>Go to the top of the page</strong></a>
 
 </body>
 </html>

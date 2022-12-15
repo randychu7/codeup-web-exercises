@@ -407,6 +407,52 @@
 
 // Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
 
+//     const pets = [
+//     {
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Pickles',
+//         type: 'Dog',
+//         age: 10
+//     }
+// ];
+//
+
+
+// function findAverageDogAge(pets) {
+//
+//     let totalDogAge = 0;
+//     let numDogs = 0;
+//     for (let i = 0; i < pets.length; i++) {
+//         let pet = pets[i];
+//         if (pet.type === 'Dog') {
+//             totalDogAge += pet.age;
+//             numDogs++;
+//         }
+//     }
+//
+//     return totalDogAge / numDogs;
+// }
+
+// const averageDogAge = findAverageDogAge(pets);
+// console.log(averageDogAge);
+
+
+// Create a function, returnPetsWithNoFish, that takes in a array of pet objects and returns an array of pet objects with no pets of type 'Fish'.
+
     const pets = [
     {
         name: 'Sparky',
@@ -424,26 +470,54 @@
         age: 5
     },
     {
-        name: 'Pickles',
+        name: 'Beans',
         type: 'Dog',
-        age: 10
+        age: 3
+    },
+    {
+        name: 'Mr. Salmon',
+        type: 'Fish',
+        age: 1
     }
 ];
 
-// function avgAge(){
-//     let avgAge = 0;
-//     for(i=0; i<pets.length; i++){
-//         avgAge += pets[i].age;
-//         return avgAge/pets[i];
-//     }
-// }
+    function returnPetsWithNoFish(pets){
+        let noFish = [];
 
-function avgAge(){
-    let avgAge = 0;
-    for(let i=0; i<pets.length; i++){
-        avgAge += pets[i].age;
+        pets.forEach(function (pet){
+            if (pet.type !== 'Fish'){
+                noFish.push(pet);
+            }
+        })
+        return noFish;
     }
-    return avgAge/pets.length;
-}
 
-console.log(avgAge());
+console.log(pets)
+console.log(returnPetsWithNoFish(pets));
+
+// let array1 = [{name: "John"}, {name: "Jane"}, {name: "Jim"}];
+// let array2 = [];
+//
+// array2.push(...array1);
+//
+// console.log(array2); // [{name: "John"}, {name: "Jane"}, {name: "Jim"}]
+
+// returnPetsWithNoFish(pets) // returns...
+//
+//     [
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//         {
+//             name: 'Bubba',
+//             type: 'Dog',
+//             age: 5
+//         },
+//         {
+//             name: 'Beans',
+//             type: 'Dog',
+//             age: 3
+//         }
+//     ]

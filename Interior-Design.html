@@ -4,6 +4,137 @@
     <meta charset="UTF-8">
     <title>Interior Design</title>
     <link rel="stylesheet" href="css/interior.css">
+    <style>
+
+
+        body{
+            margin: 0;
+            border: 0;
+        }
+
+        .page-wrapper{
+            width: 100%;
+
+        }
+        /* ================Navigation============================*/
+        .nav-row {
+            width: 100px;
+            float: left;
+        }
+
+        .name-nav{
+            padding-left: 8px;
+            padding-top: 25px;
+            color: white;
+            font-size: 7.5px;
+        }
+
+        .nav-column{
+            height: 500px;
+            background-color: #c55244;
+            width: 75px;
+            margin-top: 25px;
+        }
+
+        .nav-content{
+            color: white;
+            font-size: 6px;
+            list-style: none;
+            padding: 6px;
+
+        }
+        .nav-content>*{
+            padding: 2px;
+        }
+
+        /* ================Title============================*/
+
+        .divider{
+            position: relative;
+            z-index: 3;
+            top: -1px;
+            display: inline-block;
+            height: 2.5px;
+            width: 16px;
+            border-radius: 2px;
+            background-color: #c55244;
+        }
+
+        .title-row {
+            font-family: "Trebuchet MS";
+            font-size: 8px;
+            position: relative;
+            bottom: -15px;
+        }
+
+        .showcase{
+            margin-top: 20px;
+            color:#c55244;
+            font-family: "Trebuchet MS";
+            font-size: 8px;
+        }
+
+
+
+        /*---Images---*/
+
+        .images{
+            position: relative;
+            z-index: 4;
+            top: -441px;
+            right: -100px;
+            width: 100px;
+        }
+        .image-row{
+            position: relative;
+            z-index: 1;
+            top: -685.5px;
+            right: -224px;
+            width: 120px;
+
+        }
+
+        .bedroom{
+            width: 120px;
+            margin: auto;
+        }
+        .diningroom{
+            width: 120px;
+            margin: auto;
+        }
+        .kitchen{
+            margin: auto;
+            width: 120px;
+
+        }
+        .livingroom{
+            width: 120px;
+            margin: auto;
+        }
+        .livingroom2{
+            width: 120px;
+            margin: auto;
+        }
+        .atrium{
+            width: 120px;
+
+        }
+
+        /*--------Services Wrapper-----------*/
+
+        .services-wrapper{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .services-title{
+            font-size: 10px;
+        }
+
+        .body-services{
+            font-size: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,21 +156,33 @@
               </div>
 
           <div class = "title-row">
-              <div class="title-head">
-                  <div class="title-row">
-                      <h1>Interior Design</h1>
-                  </div>
-                  <div class="showcase">
-                      <h2>Showcase.</h2></div>
-                  <div class = "divider"></div>
-              </div>
+                      <div class="title-head">
+                          <div class="title-row"><h1>Interior Design</h1></div>
+                          <div class="showcase"><h2>Showcase.</h2></div>
+                      </div>
           </div>
 
-        <div class="images">
-            <img class= "atrium" src="./Images/atrium.jpeg">
-            </div>
+                          <div class="divider"></div>
 
-        </div>
+              <div class="images">
+                  <img class= "atrium" src="./Images/atrium.jpeg">
+                  <img class= "bedroom" src="./Images/bedroom.jpeg">
+                  <img class= "diningroom" src="./Images/diningroom.jpeg">
+                  </div>
+
+          <div class="image-row">
+              <img class= "kitchen" src="./Images/kitchenconcrete.jpeg">
+              <img class= "livingroom" src="./Images/livingroom.jpeg">
+              <img class= "livingroom2" src="./Images/livingroom2.jpeg">
+          </div>
+
+          <div class="services-wrapper">
+
+              <div class = "services-title"><h2>Services</h2></div>
+              <div class = "body-services"><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloremque in incidunt laudantium, maxime mollitia nobis numquam porro quae totam? Blanditiis doloribus inventore ipsum, magnam nam nemo sunt tempore voluptates.</p></div>
+
+          </div>
+
 
       </div>
 </body>

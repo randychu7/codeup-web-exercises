@@ -7,37 +7,33 @@ body{
 
 .page-wrapper{
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
 
 }
 /* ================Navigation============================*/
 .nav-row {
-    width: 120px;
+    width: 100px;
     float: left;
 }
 
 .name-nav{
-    padding-left: 12px;
-    padding-top: 20px;
+    padding-left: 8px;
+    padding-top: 25px;
     color: white;
-    font-size: 8px;
+    font-size: 7.5px;
 }
 
 .nav-column{
     height: 500px;
     background-color: #c55244;
-    width: 100px;
-    margin-top: 30px;
-
+    width: 75px;
+    margin-top: 25px;
 }
 
 .nav-content{
     color: white;
     font-size: 6px;
     list-style: none;
-    padding: 10px;
+    padding: 6px;
 
 }
 .nav-content>*{
@@ -46,35 +42,88 @@ body{
 
 /* ================Title============================*/
 
-.title-row{
+.divider{
+    position: relative;
+    z-index: 3;
+    top: -1px;
+    display: inline-block;
+    height: 2.5px;
+    width: 16px;
+    border-radius: 2px;
+    background-color: #c55244;
+}
+
+.title-row {
     font-family: "Trebuchet MS";
-    margin-top: 6px;
     font-size: 8px;
-    float: left;
+    position: relative;
+    bottom: -15px;
 }
 
 .showcase{
+    margin-top: 20px;
     color:#c55244;
     font-family: "Trebuchet MS";
     font-size: 8px;
-    right: 212.7px;
-    top: 50px;
 }
 
-.divider{
-    top: 80px;
-    right: 255px;
-    width: 16px;
-    height: 2.5px;
-    border-radius: 3px;
-    background-color: #c55244;
-}
+
+
+/*---Images---*/
+
 .images{
+    position: relative;
+    z-index: 4;
+    top: -441px;
+    right: -100px;
+    width: 100px;
+}
+.image-row{
+    position: relative;
+    z-index: 1;
+    top: -685.5px;
+    right: -224px;
     width: 120px;
+
 }
 
+.bedroom{
+    width: 120px;
+    margin: auto;
+}
+.diningroom{
+    width: 120px;
+    margin: auto;
+}
+.kitchen{
+    margin: auto;
+    width: 120px;
 
+}
+.livingroom{
+    width: 120px;
+    margin: auto;
+}
+.livingroom2{
+    width: 120px;
+    margin: auto;
+}
 .atrium{
     width: 120px;
+
+}
+
+/*--------Services Wrapper-----------*/
+
+.services-wrapper{
+    width: 300px;
     display: flex;
+flex-direction: column;
+}
+.services-title{
+font-size: 10px;
+}
+
+.body-services{
+    font-size: 8px;
 }

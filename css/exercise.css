@@ -1,0 +1,8 @@
+.container{
+    background-color: #3B94D9;
+    display: flex;
+    flex-direction: row;
+}
+.flex-item1{
+    background-color: #0F9E5E;
+}

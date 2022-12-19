@@ -523,45 +523,49 @@
 //     ]
 // Create a function, returnLongestPetName, that takes in a array of pet objects and returns a string of the longest name for a pet.
 
-    const pets = [
-    {
-        name: 'Sparky',
-        type: 'Fish',
-        age: 4
-    },
-    {
-        name: 'Mr. Pig',
-        type: 'Cat',
-        age: 4
-    },
-    {
-        name: 'Bubba',
-        type: 'Dog',
-        age: 5
-    },
-    {
-        name: 'Beans',
-        type: 'Dog',
-        age: 3
-    },
-    {
-        name: 'Mr. Salmon',
-        type: 'Fish',
-        age: 1
-    }
-];
+//     const pets = [
+//     {
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Beans',
+//         type: 'Dog',
+//         age: 3
+//     },
+//     {
+//         name: 'Mr. Salmon',
+//         type: 'Fish',
+//         age: 1
+//     }
+// ];
 
+// function summonNerd(idiot){
+//     if(idiot === 'daNerd'){
+//         return "daNerd is Online in league"
+//     } 
+// }
+// console.log(summonNerd('daNerd'))
 
+// function returnLongestPetName(pets) {
+//     let longestName = "";
+//     pets.forEach(function (animal) {
+//         if (animal.name.length > longestName.length) {
+//             longestName = animal.name
+//         }
+//     });
+// }
 
-
-function returnLongestPetName(pets) {
-    let longestName = "";
-    pets.forEach(function (animal) {
-        if (animal.name.length > longestName.length) {
-            longestName = animal.name
-        }
-    });
-}
-
-console.log(returnLongestPetName(pets));
-// returnLongestPetName(pets) // returns 'Mr. Salmon'
+// console.log(returnLongestPetName(pets));
+// // returnLongestPetName(pets) // returns 'Mr. Salmon'

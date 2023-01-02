@@ -319,42 +319,51 @@
     // ============================= ARRAYS AND FUNCTIONS EXAMPLES
 
     // !! Write a function, logNums, that takes in an array and logs each number in the array !!
-    const arry = [1,2,3,4]
+ 
+//     Write a function, returnLastTwoChars that returns the last two characters of an input string. Assume a string input of at least two characters.
+// returnLastTwoChars(‘cat’) // returns ‘at’
+// returnLastTwoChars(‘hello’) // returns ‘lo’
+// returnLastTwoChars(‘hi’) // returns ‘hi’
+// EXTRA CHALLENGE
+// Create a function, returnLastCharsReversed that takes in two arguments:
+//   1. a string of characters
+//   2. an integer that represents how many characters should be returned
+// The function should return a string of characters, equal to the number specified
+// by the second argument, in reverse order. If 0 is passed as a second argument,
+// return an empty string. Assume only valid inputs and that the second argument
+// will NOT exceed the length of the input string.
+// Examples:
+// returnLastCharsReversed(‘cat’, 0) // returns ‘’
+// returnLastCharsReversed(‘cat’, 1) // returns ‘t’
+// returnLastCharsReversed(‘cat’, 2) // returns ‘ta’
+// returnLastCharsReversed(‘cat’, 3) // returns ‘tac’
+// returnLastCharsReversed(‘codeup’, 1) // returns ‘p’
+// returnLastCharsReversed(‘codeup’, 3) // returns ‘pue’
+// returnLastCharsReversed(‘codeup’, 4) // returns ‘pued’
 
-    function logNums(nums){
-        console.log(nums)
+    function returnLastTwoChars(input) {
+    let inputString = "";
+    input = input.split('').reverse().join('');
+    console.log(input);
+
+    for (let i = 0; i > 2; i--) {
+        inputString += input.charAt(i);
     }
+    return reversedString;
+}
+returnLastTwoChars("hello");
 
-    arry.forEach(logNums);
-    // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
 
-    const stringsArray = ['hi', 'dude', 'hello'];
+// function returnStrNums(input) {
+//     let returnNum = input.split('');
+//     console.log(returnNum);
+//     var parseNum = stringArray.map(Number);
+//     console.log(parseNum);
 
-    function returnLongString(arr){
-           return arr.join('');
+// }
 
-    }
+// console.log(returnStrNums('awds1234'));
+// </script>
 
-    console.log(returnLongString(stringsArray))
-    // !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
-
-    const arrySum = [1,2,3,4];
-    let sum = 0;
-
-    function returnSum (arr){
-        for(var i = 0; i < arr.length; i+=1){
-            sum += arr[i];
-        }
-     return sum;
-    }
-
-    console.log(returnSum(arrySum));
-
-    function summondDaNerd(idiot){
-        if(typeof(idiot))
-    }
-
-</script>
-
-</body>
-</html>
+// </body>
+// </html>

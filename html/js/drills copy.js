@@ -1,3 +1,6 @@
+
+console.log("hello world!");
+
 // function isOdd(number){
 //     if(number % 2 !== 0) {
 //         return "Number is odd"
@@ -584,6 +587,7 @@ function returnLastTwoChars(input) {
     }
 }
 
+console.log(returnLastTwoChars("hello"));
 
 // EXTRA CHALLENGE
 // Create a function, returnLastCharsReversed that takes in two arguments:

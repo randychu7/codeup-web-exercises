@@ -4,38 +4,330 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-
+    <link rel="stylesheet" href="custom.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
   </head>
   <body>
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-                <div class="d-flex align-items-center" id="navbarTogglerDemo01">
-                                <a class="navbar-brand" href="#">Pizza World</a>
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" aria-current="page" href="#">Order Online</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Menu</a>
-                                            </li>
-                                        </ul>
-                                <div style="height: 35px; background-color: rgba(255,0,0,0.1);">
-                                    <form class="d-flex">
-                                        <div class="h-25 d-inline-block" style="width: 200px; background-color: rgba(0,0,255,.1)"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></div>
-                                        <div class="h-25 d-inline-block" style="width: 20px; background-color: rgba(0,0,255,.1)"></div><button class="btn btn-outline-success" type="submit">Search stores near you!</button></div>
-                                    </form>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="w-100 p-3" style = "height: 70px;">
+                                    <div class="d-flex flex-row bd-highlight mb-3" id="navbarTogglerDemo01">
+                                                    <a class="navbar-brand" href="#">Pizza World</a>
+                                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#">Menu</a>
+                                                                </li>
+                                                            
+                                                <li><div class ="d-flex justify-content-center" style="height: 32px; background-color: rgba(255,0,0,0.1);">
+                                                        <form>
+                                                            <div class="h-2 d-inline-block" style="width: 200px; background-color: rgba(0,0,255,.1)"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></div>
+                                                            <div class="h-25 d-inline-block" style="width: 20px; background-color: rgba(0,0,255,.1)"></div><button class="btn btn-outline-success" type="submit">Search stores near you!</button></div>
+                                                        </form>
+                                                    </li> 
+                                                    </ul>
+                                                        <div class = "d-flex justify-content-center" style="height: 35px; background-color: rgba(255,0,0,0.1);">
+                                                            <img src="/Images/309035_user_account_human_person_icon (1).png" style="height: 45px;">
+                                                            <p class = "d-flex align-items-center">Sign up!</p>
+                                                        </div>
+                                                    </div>
 
-                                    <div style="h-25 d-inline-block"><img src="/Images/309035_user_account_human_person_icon (1).png"></div>
-                                
-                                </div>
+                                    
+                                    </div>
+                            </div>
+                    </nav>
 
-                
-                </div>
+<div class = "jumbotron d-flex justify-content-center align-items-center position-relative">
+<div class=" d-flex justify-content-center p-3 mb-2 bg-light text-dark position-absolute top-50 start-50 translate-middle w-100 opacity-75"><h2>Welcome to Pizza World</h2></div>
+<img src = "/Images/pizza.png">
+</div>
+
+<h2 class ="mt-5">Build Your Own Pizza</h2>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Size and Crust<span class="ms-1 badge bg-secondary">1</span></button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Cheese and Sauce<span class="ms-1 badge bg-secondary">2</span></button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Toppings<span class="ms-1 badge bg-secondary " >3</span></button>
+</li>
+</ul>
+
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        
+        <div class="card text-center">
+        <div class="card-header d-flex justify-content-start p-3 mb-2 bg-primary text-white">
+            Choose Size and Crust
         </div>
-</nav>
+        <div class="card-body">
+            <div class="card">
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card-header d-flex justify-content-start">
+                        Hand Tossed
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-start">Garlic seasoned crust with a rich, buttery taste</li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label d-flex justify-content-start" for="flexRadioDefault2">
+                                Small (10")
+                            </label>
+                          </div></li>
+                          <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label d-flex justify-content-start" for="flexRadioDefault2">
+                                Medium (12")
+                            </label>
+                          </div></li>
+                        </ul>
+                    </div>
+
+                    <div class="card mt-4 w-auto">
+                        <div class="card-header d-flex justify-content-start">
+                        Crispy Thin
+                        </div>
+                        <ul class="list-group list-group-flush" >
+                        <li class="list-group-item d-flex justify-content-start">Thin enough for optimum crispy to crunchy ratio.</li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label d-flex justify-content-start" for="flexRadioDefault2">
+                                Medium (12")
+                            </label>
+                          </div></li>
+                          <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label d-flex justify-content-start" for="flexRadioDefault2">
+                                Large (14")
+                            </label>
+                          </div></li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary mb-3">Next</button>
+                            </div>
+                      </div>
+                    
+            </div>
+      
+
+
+
+
+         
+        </div>
+
+
+  
+                
+</div></div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="card text-center">
+        <div class="card-header d-flex justify-content-start p-3 mb-2 bg-primary text-white">
+            Choose Cheese and Sauce
+        </div>
+        <div class="card-body">
+            <div class="card">
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card-header d-flex justify-content-start">
+                        Cheese
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-start">How Much?</li>
+                        <li class="list-group-item">
+
+                            <div class="btn-group w-100">
+                                <button type="button" class="btn btn-secondary dropdown-toggle text-start d-flex justify-content-between p-3 mb-2 bg-white text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Normal
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end w-100">
+                                  <li><button class="dropdown-item" type="button">Light</button></li>
+                                  <li><button class="dropdown-item" type="button">Extra</button></li>
+                                  <li><button class="dropdown-item" type="button">Double</button></li>
+                                </ul>
+                              </div>
+
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mt-4 w-auto">
+                        <div class="card-header d-flex justify-content-start">
+                        Sauce
+                        </div>
+                        <ul class="list-group list-group-flush" >
+                        <li class="list-group-item d-flex justify-content-start">What Type?</li>
+                        <li class="list-group-item">   
+                            
+                            <div class="btn-group w-100">
+                            <button type="button" class="btn btn-secondary dropdown-toggle text-start d-flex justify-content-between p-3 mb-2 bg-white text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tomato
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end w-100">
+                              <li><button class="dropdown-item" type="button">Marinara</button></li>
+                              <li><button class="dropdown-item" type="button">BBQ</button></li>
+                              <li><button class="dropdown-item" type="button"Alfredo</button></li>
+                                 </ul>
+                                </div>
+                        </li>
+                        <ul class="list-group list-group-flush" >
+                                <li class="list-group-item d-flex justify-content-start">How much?</li>
+                                 <li class="list-group-item">
+
+                            <div class="btn-group w-100">
+                                <button type="button" class="btn btn-secondary dropdown-toggle text-start d-flex justify-content-between p-3 mb-2 bg-white text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Light
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end w-100">
+                                  <li><button class="dropdown-item" type="button">Normal</button></li>
+                                  <li><button class="dropdown-item" type="button">Extra</button></li>
+                                     </ul>
+                                    </div>
+                            
+                                </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer ">
+                        
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary mb-3"> Previous </button>
+                            <button type="button" class="btn btn-primary mb-3">
+                                Next</button>
+                            </div>
+                           
+
+                      </div>
+                    
+            </div>
+      
+
+
+
+
+         
+        </div>
+
+
+  
+                
+</div></div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="card text-center">
+        <div class="card-header d-flex justify-content-start p-3 mb-2 bg-primary text-white">
+            Choose Toppings
+        </div>
+        <div class="card-body">
+            <div class="card">
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card-header d-flex justify-content-start">
+                        Choose Meats
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckDefault">
+                                  Beef
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckChecked">
+                                  Ham
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckDefault">
+                                  Philly Steak
+                                </label>
+                              </div>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckChecked">
+                                  Bacon
+                                </label>
+                              </div>
+
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mt-4 w-auto">
+                        <div class="card-header d-flex justify-content-start">
+                        Choose Non-Meats
+                        </div>
+                        <ul class="list-group list-group-flush" >
+              
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckDefault">
+                                  Green Peppers
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckChecked">
+                                  Mushrooms
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckDefault">
+                                  Onions
+                                </label>
+                              </div>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label d-flex justify-content-start" for="flexCheckChecked">
+                                  Jalapeno Peppers
+                                </label>
+                              </div>
+
+
+                            </li>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary mb-3">Checkout</button>
+                            </div>
+                      </div>
+                    
+            </div>
+      
+
+
+
+
+         
+        </div>
+
+
+  
+                
+</div></div>
+  </div>
+<!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class ="p-3 mb-2 bg-primary text-white">Choose Size and Crust</div> -->
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

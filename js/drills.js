@@ -1,6 +1,4 @@
 
-console.log("hello world!");
-
 // function isOdd(number){
 //     if(number % 2 !== 0) {
 //         return "Number is odd"
@@ -578,16 +576,16 @@ console.log("hello world!");
 // returnLastTwoChars(‘hello’) // returns ‘lo’
 // returnLastTwoChars(‘hi’) // returns ‘hi’
 
-function returnLastTwoChars(input) {
-    let inputString = "";
-    input = input.split().reverse().join();
-    console.log(input);
-    for (let i = 0; i < 2; i++) {
-        inputString += input.charAt(i);
-    }
-}
+// function returnLastTwoChars(input) {
+//     let inputString = "";
+//     input = input.split().reverse().join();
+//     console.log(input);
+//     for (let i = 0; i < 2; i++) {
+//         inputString += input.charAt(i);
+//     }
+// }
 
-console.log(returnLastTwoChars("hello"));
+// console.log(returnLastTwoChars("hello"));
 
 // EXTRA CHALLENGE
 // Create a function, returnLastCharsReversed that takes in two arguments:
@@ -605,3 +603,27 @@ console.log(returnLastTwoChars("hello"));
 // returnLastCharsReversed(‘codeup’, 1) // returns ‘p’
 // returnLastCharsReversed(‘codeup’, 3) // returns ‘pue’
 // returnLastCharsReversed(‘codeup’, 4) // returns ‘pued’
+
+
+
+
+
+
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filterList([1,2,‘a’,‘b’]) // returns [1,2]
+// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
+// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
+
+function filterList(int){
+    let list = [];
+    for (let i = 0; i < int.length; i++) {
+        if (typeof int[i]=== "number") {
+            list.push(int[i]);
+        }
+    }
+    return list;
+    
+}
+
+console.log(filterList([1,2,"a","b"]));
+console.log(filterList([1,"a","b",0,15]));

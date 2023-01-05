@@ -1,38 +1,30 @@
-.fancy-header{
-    box-sizing: border-box;
-    color: purple;
-    text-align: center;
-
+/* selector for id="container" */
+#container {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
 }
 
-body{
-    background-color: grey;
-    background-image: url("/Images/Mercedes.jpeg");
-    background-repeat: no-repeat;
-    background-size: 1500px;
-    background-attachment: fixed;
-    font-family: ".SF NS";
-
+/*  selector for all "h1" elements
+    that are a descendent of id="container"
+    and have a class of "fancy-header" */
+#container h1.fancy-header {
+    color: blue;
+    text-decoration: underline;
 }
 
-table{
-    border-collapse: collapse;
-
+/* selector for all "em" elements */
+em {
+    font-weight: bold;
 }
 
-.cell-highlighted{
-    background-color: gold;
-    color: black;
-    font-family: "Academy Engraved LET";
-
+/* selector for all elements with class="article" */
+.article {
+    clear:both;
 }
 
-th, td{
-border: 1px solid black;
-    padding: 5px;
-}
-
-thead{
-    color: white;
-    background-color: black;
+/*  selector for all "anchor" elements
+    that are a direct child of an element with class="article" */
+.article>a {
+    float:right;
 }

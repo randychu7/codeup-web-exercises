@@ -238,15 +238,15 @@ function usCurrency(dollar){
     // let authorName = prompt("What is the authors First Name?");
     // let authorLast = prompt("What is author last name?");
 
-// function createBook(bookCreated, authorFirst, authorLast){
-//         books.push({
-//             name:bookCreated,
-//             author: {
-//             firstName: authorFirst,
-//             lastName: authorLast
-//                 }
-//              })
-//         }
+function createBook(bookCreated, authorFirst, authorLast){
+        books.push({
+            name:bookCreated,
+            author: {
+            firstName: authorFirst,
+            lastName: authorLast
+                }
+             })
+        }
 
 
     //Create a function that creates an object
@@ -424,15 +424,15 @@ function usCurrency(dollar){
 //         }
 //     })
 
-    var fib = function(n) {
-        if (n < 2) {
-            return n;
-        } else {
-            return fib(n - 1) + fib(n - 2);
-        }
-    };
+    // var fib = function(n) {
+    //     if (n < 2) {
+    //         return n;
+    //     } else {
+    //         return fib(n - 1) + fib(n - 2);
+    //     }
+    // };
 
-    console.log();
+    // console.log();
 
 
 })();

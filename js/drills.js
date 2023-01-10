@@ -614,16 +614,49 @@
 // filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
 // filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
 
-function filterList(int){
-    let list = [];
-    for (let i = 0; i < int.length; i++) {
-        if (typeof int[i]=== "number") {
-            list.push(int[i]);
-        }
-    }
-    return list;
+// function filterList(int){
+//     let list = [];
+//     for (let i = 0; i < int.length; i++) {
+//         if (typeof int[i]=== "number") {
+//             list.push(int[i]);
+//         }
+//     }
+//     return list;
     
-}
+// }
 
-console.log(filterList([1,2,"a","b"]));
-console.log(filterList([1,"a","b",0,15]));
+// console.log(filterList([1,2,"a","b"]));
+// console.log(filterList([1,"a","b",0,15]));
+
+// ================================= WARM UP
+
+// Create a function, zipArrays, that takes two array inputs of the same length and returns an array with the elements 
+// of both arrays alternating in the order of first[0], second[0], first[1], second[1], etc. If both arrays are empty, return an empty array.
+
+// function zipArrays(input1,input2){
+//     let emptyArray =[];
+//     if(input1.length === input2.length){
+//         for(let i = 0; i < input1.length; i++){
+//             emptyArray.push(input1[i]);
+//             emptyArray.push(input2[i]);
+//         }
+//         return emptyArray;
+    
+//     }
+// }
+
+
+// console.log(zipArrays([], [])) // returns []
+// console.log(zipArrays([1], [2])) // returns [1, 2]
+// console.log(zipArrays(['a', 'b'], ['c', 'd'])) // returns... ['a', 'c', 'b', 'd']
+// console.log(zipArrays([1,2,'a','b'], ['bob', null, 'sally', 25])) // returns... 
+
+// [
+//   1, 
+//   'bob', 
+//   2, 
+//   null, 
+//   'a', /   'sally',
+//   'b',
+//   25
+// 

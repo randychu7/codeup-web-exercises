@@ -726,4 +726,4 @@ console.log(getUserCredentials(users));
   }
 ]
 
-*/
+*/}

@@ -8,15 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <h1 class = "title" id = "title">Hello mf</h1>
+    </div>
+    <div class = "paragraph" id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class = "watchout"></span>Fugit, aperiam omnis quam delectus cupiditate est iste eum assumenda pariatur eos in consectetur ut dignissimos! Totam praesentium natus fugit ipsum facilis.</div>
+
 
     <script src="./js/jquery-3.6.3.js"></script>
-
     <script>
-        $(function(){
-            alert("The page has loaded!");
-        });
+
+        $('#title').html('It changed!')
+
+        $('.paragraph').appendTo('get fucked kid');
+
+        $('.watchout').html('It changed! again! ');
+
+
     </script>
-    
 </body>
 </html>

@@ -666,37 +666,37 @@
 // Write a function, getUserCredentials, that takes in a list of user objects and returns a list of user objects with only the username and password properties. Assume at least an array of one user object.
 
 
-const users = [
-  {
-    firstName: 'Justin',
-    lastName: 'Reich',
-    dob: '1923-01-01',
-    username: 'jreich',
-    password: '$2y$10$UJlsa5vWq5DUKJjyO38gM.dCZfudWOFCrLWQosh0mhXKaZmRmvDse'
-  },
-  {
-    firstName: 'Sally',
-    lastName: 'Smith',
-    dob: '1935-03-11',
-    username: 'ssmith',
-    password: '$2y$10$VaLGU5.7uQLr.eg6kSI9seOcP4JY4XktWt28I9JgblAGIDpkDXbya'
-  },
-  {
-    firstName: 'Fred',
-    lastName: 'Smith',
-    dob: '1999-01-21',
-    username: 'fsmith',
-    password: '$2y$10$3USt6Dl8TNMkeh0KioPnfeVpynAotXvSIJ5xrzAHragPEAWMYEBNS'
-  },
-];
+// const users = [
+//   {
+//     firstName: 'Justin',
+//     lastName: 'Reich',
+//     dob: '1923-01-01',
+//     username: 'jreich',
+//     password: '$2y$10$UJlsa5vWq5DUKJjyO38gM.dCZfudWOFCrLWQosh0mhXKaZmRmvDse'
+//   },
+//   {
+//     firstName: 'Sally',
+//     lastName: 'Smith',
+//     dob: '1935-03-11',
+//     username: 'ssmith',
+//     password: '$2y$10$VaLGU5.7uQLr.eg6kSI9seOcP4JY4XktWt28I9JgblAGIDpkDXbya'
+//   },
+//   {
+//     firstName: 'Fred',
+//     lastName: 'Smith',
+//     dob: '1999-01-21',
+//     username: 'fsmith',
+//     password: '$2y$10$3USt6Dl8TNMkeh0KioPnfeVpynAotXvSIJ5xrzAHragPEAWMYEBNS'
+//   },
+// ];
 
-function getUserCredentials(users){
-    let userInfo = [];
-    for(let i = 0; i < users.length; i++){
-        if (users[i] === 'username'){
-            userInfo.push(users[i]);
-         }
-        }
+// function getUserCredentials(users){
+//     let userInfo = [];
+//     for(let i = 0; i < users.length; i++){
+//         if (users[i] === 'username'){
+//             userInfo.push(users[i]);
+//          }
+//         }
        
 
         
@@ -708,7 +708,7 @@ function getUserCredentials(users){
 
 
 
-console.log(getUserCredentials(users));
+// console.log(getUserCredentials(users));
 /*
 
 [
@@ -726,4 +726,12 @@ console.log(getUserCredentials(users));
   }
 ]
 
-*/}
+*/
+// This loop should print the numbers from 0 through 9 in the console
+
+for (let i = 0; i < 10; i++) {
+  console.log( "The value of i is " + i);
+  i++;
+}
+
+// desired output : 0, 1 ,2,  3, 4, 5, 6, 7, 8, 9

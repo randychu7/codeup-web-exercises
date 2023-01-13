@@ -23,6 +23,21 @@
 
         $('.watchout').html('It changed! again! ');
 
+        $(function () {
+        alert("The DOM has finished loading!");
+      });
+      let theHeader = $('#header').html();
+      alert(theHeader);
+      let theParagraph = $('#paragraph').html();
+      alert(theParagraph);
+      $('.codeup').css("border", '1px solid red');
+      $("ul").css("font-size", '20px')
+      $('h1').css("background", 'yeallow');
+      $('p').css("background", 'yellow');
+      $('ul').css("background", 'yellow');
+      $("h1, p, ul").css('background-color', 'yellow');
+      let headerAlert = $('h1').html();
+      alert(headerAlert);
 
     </script>
 </body>

@@ -12,12 +12,21 @@
   .highlight {
     background: yellow;
   }
-        
+        .images{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .images img{
+            width: 100%;
+        }
+
+
 </style>
 <body>
 </head>
 
-    <p>Glacier National Park:</p>
+    <!-- <p>Glacier National Park:</p>
 
 <dl>
     <p id="reveal">See information</p>
@@ -36,10 +45,115 @@
 
     <dt>Costs</dt>
     <dd class = "invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+ -->
 
-</dl>
+    <!-- <button id = "highlightLi"></button>
+
+    <h3 class = "heading" id ="everglade-title">Everglades</h3>
+    <ul class = "parks" id="Everglades">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3 class = "heading">State Parks of Texas</h3>
+    <ul class = "parks" id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3 class = "heading" id="national-parks-heading">Badlands</h3>
+    <ul class = "parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+</dl> -->
+
+<div class = "images">
+        <div class = "frame1">
+        <div class = "left img">
+            <img src="/Images/atrium.jpeg"">
+            
+        </div>
+        <button id = "swap-right">Swap Right</button>
+         </div>
+
+
+         <div class = "frame2">
+        <div class = "center img">
+            <img  src="/Images/bedroom.jpeg">
+        </div>
+        <button id = "swap-center">Swap Center</button>
+        </div>
+
+        <div class = "frame3">
+        <div class = "right img">
+            <img  src="/Images/diningroom.jpeg">
+        </div>
+        <button id = "swap-left">Swap left</button>
+        </div>
+</div>
+
+
+
 <script src="/js/jquery-3.6.3.js"></script>
 <script>
+
+$(document).ready(function() {
+  // function to swap left frame with center frame
+  $(".swap-left").click(function() {
+    var centerSrc = $(".center img").attr("src");
+    $(".left img").attr("src", centerSrc);
+  });
+  
+  // function to randomly swap center frame with left or right frame
+  $(".swap-center").click(function() {
+    var leftSrc = $(".left img").attr("src");
+    var rightSrc = $(".right img").attr("src");
+    if (Math.random() < 0.5) {
+      $(".center img").attr("src", leftSrc);
+    } else {
+      $(".center img").attr("src", rightSrc);
+    }
+  });
+  
+  // function to swap right frame with center frame
+  $(".swap-right").click(function() {
+    var centerSrc = $(".center img").attr("src");
+    $(".right img").attr("src", centerSrc);
+  });
+});
+
+
+
+// $("#right-button").click(function(){
+// var html3 = '';
+// var html4 = '';
+//  $('.diningroom').empty();
+//  html += '<img class = "bed" src="/Images/bedroom.jpeg">'
+//  $('.atrium').append(html);
+//  $('.bed').empty();
+//  html2 += ' <img src="/Images/atrium.jpeg" style = "width: 100%">'
+//  $('.bed').append(html2);
+// })
+
+
+
+// <img src="/Images/atrium.jpeg" style = "width: 100%">
+
+// <img src="/Images/bedroom.jpeg" style = "width: 100%">
+
+// <img src="/Images/diningroom.jpeg" style = "width: 100%">
+
+
+
+
 
 $( "dt" ).click(function() {
   $( this ).toggleClass('highlight');
@@ -49,6 +163,31 @@ $('#reveal').click(function(){
     $('dd').toggleClass("invisible");
 });
 
+
+$('#highlightLi').click(function(){
+    $('ul').each(function(index, element){
+    $(this)
+    .children()
+    .last()
+    .css('background', 'yellow')
+    })
+});
+
+
+$('h3').click(function(){
+    $(this)
+    .next()
+    .css('font-weight', 'bold');
+})
+
+
+
+$('li').click(function(){
+    $(this).parent()
+    .children()
+    .first()
+    .css('color', 'blue')
+});
 
 
 </script>

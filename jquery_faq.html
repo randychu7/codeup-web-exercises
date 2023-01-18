@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+  .highlight {
+    background: yellow;
+  }
+        
+</style>
+<body>
+</head>
+
+    <p>Glacier National Park:</p>
+
+<dl>
+    <p id="reveal">See information</p>
+
+    <dt>Park openings</dt>
+    <dd class = "invisible"> Glacier National Park is open year-round, 24 hours a day. In the fall winter and spring, some roads are inaccessible by car due to snow.</dd>
+
+    <dt>Park Location</dt>
+    <dd class = "invisible">Glacier National Park is located in northwestern Montana on the U.S./Canadian border. Access to the park from the east and west is along U.S. Highway 2. Park headquarters is located in West Glacier.</dd>
+
+    <dt>Costs</dt>
+    <dd class = "invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+
+    <dt>Costs</dt>
+    <dd class = "invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+
+    <dt>Costs</dt>
+    <dd class = "invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+
+</dl>
+<script src="/js/jquery-3.6.3.js"></script>
+<script>
+
+$( "dt" ).click(function() {
+  $( this ).toggleClass('highlight');
+});
+
+$('#reveal').click(function(){
+    $('dd').toggleClass("invisible");
+});
+
+
+
+</script>
+</body>
+</html>

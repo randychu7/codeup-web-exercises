@@ -76,9 +76,9 @@ console.log(getSchoolRating(neighborhood3));
 
 function bestNeighborhood (area){
   if (getSchoolRating(area) >= 24 && area.medianHomePrice <300000 && area.crimeRate == "low" ){
-    console.log("is the best neighborhood!")
+    return ("is the best neighborhood!")
   }else {
-    console.log("is not the best neighborhood!")
+    return ("is not the best neighborhood!")
   }
 }
 
@@ -86,6 +86,12 @@ console.log(bestNeighborhood(neighborhood1));
 console.log(bestNeighborhood(neighborhood2));
 console.log(bestNeighborhood(neighborhood3));
 console.log(bestNeighborhood(neighborhood4));
+
+
+
+
+
+
   //  return (neighborhood.medianHomePrice < 300000 && neighborhood.crimeRate == "low" && neighborhood.schools.rating <= 24)
 
 

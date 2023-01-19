@@ -8,84 +8,84 @@
 
 
 
-const neighborhood1 = {
-    neighborhood: "Lovely Estates",
-    medianHomePrice: 280000,
-    pool: true,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 6},
-        {name: "High School", rating: 8}
-    ]
-};
+// const neighborhood1 = {
+//     neighborhood: "Lovely Estates",
+//     medianHomePrice: 280000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 6},
+//         {name: "High School", rating: 8}
+//     ]
+// };
 
-const neighborhood2 = {
-    neighborhood: "Luminous Estates",
-    medianHomePrice: 270000,
-    pool: true,
-    tennis: false,
-    crimeRate: "high",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-}
+// const neighborhood2 = {
+//     neighborhood: "Luminous Estates",
+//     medianHomePrice: 270000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "high",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// }
 
-const neighborhood3 = {
-    neighborhood: "Oak Mountain",
-    medianHomePrice: 290000,
-    pool: false,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-}
+// const neighborhood3 = {
+//     neighborhood: "Oak Mountain",
+//     medianHomePrice: 290000,
+//     pool: false,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// }
 
-const neighborhood4 = {
-    neighborhood: "Ginormous Acres",
-    medianHomePrice: 350000,
-    pool: true,
-    tennis: true,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 9},
-        {name: "Middle School", rating: 9},
-        {name: "High School", rating: 9}
-    ]
-}
+// const neighborhood4 = {
+//     neighborhood: "Ginormous Acres",
+//     medianHomePrice: 350000,
+//     pool: true,
+//     tennis: true,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 9},
+//         {name: "Middle School", rating: 9},
+//         {name: "High School", rating: 9}
+//     ]
+// }
 
 
-let schoolRating =  0;
+// let schoolRating =  0;
 
-function getSchoolRating(school){
-  for(let i = 0; i < school.schools.length; i++) {
-    schoolRating += school.schools[i].rating;;
+// function getSchoolRating(school){
+//   for(let i = 0; i < school.schools.length; i++) {
+//     schoolRating += school.schools[i].rating;;
    
-  }
-  return schoolRating;
-}
+//   }
+//   return schoolRating;
+// }
 
 
-console.log(getSchoolRating(neighborhood3));
+// console.log(getSchoolRating(neighborhood3));
 
-function bestNeighborhood (area){
-  if (getSchoolRating(area) >= 24 && area.medianHomePrice <300000 && area.crimeRate == "low" ){
-    return ("is the best neighborhood!")
-  }else {
-    return ("is not the best neighborhood!")
-  }
-}
+// function bestNeighborhood (area){
+//   if (getSchoolRating(area) >= 24 && area.medianHomePrice <300000 && area.crimeRate == "low" ){
+//     return ("is the best neighborhood!")
+//   }else {
+//     return ("is not the best neighborhood!")
+//   }
+// }
 
-console.log(bestNeighborhood(neighborhood1));
-console.log(bestNeighborhood(neighborhood2));
-console.log(bestNeighborhood(neighborhood3));
-console.log(bestNeighborhood(neighborhood4));
+// console.log(bestNeighborhood(neighborhood1));
+// console.log(bestNeighborhood(neighborhood2));
+// console.log(bestNeighborhood(neighborhood3));
+// console.log(bestNeighborhood(neighborhood4));
 
 
 
@@ -117,10 +117,43 @@ console.log(bestNeighborhood(neighborhood4));
 // fn(neighborhood3) // returns true
 // fn(neighborhood4) // returns false due to median home price
     
-      
-  
-  
-  
-  
+
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+//
+// ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomes ‘$’
+//
+// encodeStr(‘apple’) // returns ‘@pple’
+// encodeStr(‘codeup’) // returns ‘codeup’
+// encodeStr(‘SASS’) // returns ‘$@$$’
+// encodeStr(‘bike’) // returns ‘b1ke’
+
+function encodeStr(input){
+let lower = input.toLowerCase();
+let splitInput = lower.split("");
+
+for(let i=0; i<splitInput.length; i++){
+     splitInput[i] = splitInput[i].replace('a','@');
+  }
+ 
+  for(let i=0; i<splitInput.length; i++){
+    splitInput[i] = splitInput[i].replace('i','1');
+ }
+ for(let i=0; i<splitInput.length; i++){
+  splitInput[i] = splitInput[i].replace('s','$');
+}
+return splitInput;
+}
+
+
+
+
+ console.log(encodeStr('apple')) // returns ‘@pple’
+ console.log(encodeStr('codeup')) // returns ‘codeup’
+ console.log(encodeStr('SASS')) // returns ‘$@$$’
+ console.log(encodeStr('bike')) // returns ‘b1ke’
+
+
   
   

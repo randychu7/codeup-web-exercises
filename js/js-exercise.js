@@ -143,7 +143,7 @@ for(let i=0; i<splitInput.length; i++){
  for(let i=0; i<splitInput.length; i++){
   splitInput[i] = splitInput[i].replace('s','$');
 }
-return splitInput;
+return splitInput.join("");
 }
 
 

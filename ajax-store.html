@@ -11,7 +11,7 @@
 <h1>My Tool Store</h1>
 <table id="products" >
     <thead>
-
+        <button>Reset Store</button>
         <tr>
             <th>Title</th>
             <th>Quantity</th>
@@ -26,6 +26,9 @@
             
 
     </tbody>
+   
+
+
 </table>
 </div>
 
@@ -34,26 +37,26 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax('./data/inventory.json').done(function(data){
+    $.ajax('./data/inventory.json').done(function(inventory){
                 let html = "";
               
-                for(let i=0;i<data.length;i++){
-                    console.log(data[i]);
+                for(let i=0;i<inventory.length;i++){
+                   
                     html += ` <tr>
-            <th >${data[i].title}</th>
-            <th>${data[i].quantity}</th>
-            <th>${data[i].price}</th>
-            <th>${data[i].categories}</th>
+            <td>${inventory[i].title}</td>
+            <td>${inventory[i].quantity}</td>
+            <td>${inventory[i].price}</td>
+            <td>${inventory[i].categories}</td>
         </tr>
+
+                       
  `
-
-
-                 $('#insertProducts').html(html);
-        }}
-
+        }
+        $('#insertProducts').append(html);
+   
 
         
-    )
+})
 
 
 

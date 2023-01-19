@@ -134,15 +134,10 @@ let lower = input.toLowerCase();
 let splitInput = lower.split("");
 
 for(let i=0; i<splitInput.length; i++){
-     splitInput[i] = splitInput[i].replace('a','@');
+splitInput[i] = splitInput[i].replace('a','@');
+splitInput[i] = splitInput[i].replace('i','1');
+splitInput[i] = splitInput[i].replace('s','$');
   }
- 
-  for(let i=0; i<splitInput.length; i++){
-    splitInput[i] = splitInput[i].replace('i','1');
- }
- for(let i=0; i<splitInput.length; i++){
-  splitInput[i] = splitInput[i].replace('s','$');
-}
 return splitInput.join("");
 }
 

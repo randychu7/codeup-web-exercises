@@ -61,24 +61,6 @@
             "orderedBy": "Johnny Be Good"
         }
      */
-    //  $.ajax("./data/stuff.json").done(function(orders){
-    //     let html = '';
-    //       for (let i = 0; i < orders.length; i += 1) {
-     
-    //     html += '    <article class="card">\n' +
-    //             '        <h3>Order #' + orders[i].orderNumber + '</h3>\n' +
-    //             '        <dl>\n' +
-    //             '            <dt>Item Ordered</dt>\n' +
-    //             '            <dd>' + orders[i].itemOrdered + '</dd>\n' +
-    //             '            <dt>Ordered by</dt>\n' +
-    //             '            <dd>' + orders[i].orderedBy + '</dd>\n' +
-    //             '        </dl>\n' +
-    //             '    </article>';
-    //   }
-    //   $('#orders').html(html);
-
-    // })
-   
   
     function createHTML(orders) {
       let html = '';
@@ -99,9 +81,8 @@
         }
 
 
-
-
     /**
+     * 
      * Triggers a new AJAX request to the orders.json file and re-renders the orders HTML using the createHTML function
      */
     function updatePage() {
@@ -110,7 +91,7 @@
       $.get('./data/stuff.json').done(function(orders) {
         let ordersHTML = createHTML(orders); // create HTML string
         $('#orders').html(ordersHTML); // update the DOM with the new HTML
-      }).fail(function(jqXhr, status, error) {
+         }).fail(function(jqXhr, status, error) {
         // console.log(jqXhr);
         // console.log(status);
         // console.log(error);
@@ -120,7 +101,6 @@
     updatePage();
 
     // when a user clicks on the update button, refresh the page with the latest order information
-
     $('#update').on('click', function() {
       updatePage();
     });

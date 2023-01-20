@@ -74,21 +74,21 @@
 
 
     // the  geocode method from mapbox-geocoder-utils.js 
-    geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(18);
-    });
+    // geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(18);
+    // });
 
 
     let marker = new mapboxgl.Marker()
     .setLngLat([-98.4916, 29.4260])
     .addTo(map);
 
-    // let popup = new mapboxgl.Popup()
-    // .setLngLat([-98.489615, 29.426827])
-    // .setHTML("<p>Codeup Rocks!</p>")
-    // .addTo(map)
+    let popup = new mapboxgl.Popup()
+    .setLngLat([-98.489615, 29.426827])
+    .setHTML("<p>Codeup Rocks!</p>")
+    .addTo(map)
 
     
 

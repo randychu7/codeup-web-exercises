@@ -1,5 +1,5 @@
 const keys = {
     
-    mapbox: ''
+    mapbox: '.'
 
 }

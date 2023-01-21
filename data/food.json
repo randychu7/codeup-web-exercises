@@ -1,0 +1,29 @@
+[
+       {
+        "Name": "The DogFather",
+        "long": "-98.49962874273244",
+        "lat": "29.493481219142602",
+        "type": "Fast Food",
+        "price": "$"
+       
+        },
+
+        {
+        "Name": "Almo Hot Dogs",
+        "long": "-98.4889853615491", 
+        "lat": "29.42491092328355",
+        "type": "Fast Food",
+        "price": "$$"
+           
+        },
+
+        {
+        "Name": "El Weincero",
+        "long": "-98.4876466079693",
+        "lat": "29.426613636165662",
+        "type": "Fast Food",
+        "price": "$$$"
+               
+        }
+  
+]

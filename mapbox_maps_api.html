@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link rel="stylesheet" href="./css/mapbox.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            flex-grow: 1;
+        }
+        header.container {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.074);
+        }
+        main.container, main.container>.row {
+            padding: 0;
+            flex-grow: 1;
+        }
+        aside.column {
+            width: 300px;
+            flex: none;
+        }
+
+        body{
+            background-color: #5ccdec;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .cards img{
+        width: 200px;
+        }
+
+ 
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+                <header class="container">
+                    <div class="row full-width">
+                        <div class="column">
+                            <H1>GOOGLE 2.0</H1>
+                        </div>
+                        <div class="column">
+            
+                        </div>
+                    </div>
+                </header>
+
+                <main class="container">
+                    <div class="row full-width">
+                                <aside class="column display">
+                                    <div></div>
+                                    <div class = "cards" style="background-color: #439eb7;"> 
+                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
+                                        <h2>Dog Father</h2>
+                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
+                                    </div>
+                                    <div class = "cards" style="background-color: #439eb7;"> 
+                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
+                                        <h2>Almo Hotdogs</h2>
+                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
+                                    </div>
+                                    <div class = "cards" id = "elweincero" style="background-color: #439eb7;"> 
+                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
+                                        <h2>El Weincero</h2>
+                                        <p >507 E.Houston St. San Antonio, Texas 78205</p>
+                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
+                                    </div>
+                                </aside>
+                        <div class="column">
+                            <div id='map'></div>
+                        </div>
+                        
+                    </div>
+        </div>
+</main>
+    
+
+<!--Keys-->
+<script src = "./js/keys.js"></script>
+<script src="./js/jquery-3.6.3.js"></script>
+<!--Mapbox Utils-->
+<script src = "./js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+
+<!-- Custom JS -->
+<script>
+    $(document).ready(function(){
+
+    // function updatePage() {
+    //   // make request to orders.json
+    //   console.log('update resturants');
+    //   $.get('./data/food.json').done(function(orders) {
+        
+
+
+ 
+      
+    //   });
+    // }
+
+    $.get('./data/food.json').done(function(food) {
+        food.forEach(function(item) {
+       let popup = new mapboxgl.Popup()
+          
+            .setLngLat([item.long, item.lat])
+            .setHTML(`<p>${item.Name}</p>
+            <p>${item.type}</p>
+            <p>${item.price}</p>`)
+            // .addTo(map)
+          let marker = new mapboxgl
+            .Marker()
+            .setLngLat([item.long,item.lat])
+            .addTo(map);
+            marker.setPopup(popup);
+            
+    })});
+
+    // console.log(item[2]);
+
+$('#elweincero').on('click', function(){
+        geocode("507 E.Houston St. San Antonio, Texas 78205", keys.mapbox).then(function(result) {
+
+    map.setCenter(result);
+    map.setZoom(20);
+    let marker = new mapboxgl
+            .Marker()
+            .setLngLat([item.long,item.lat])
+            .addTo(map);
+            marker.setPopup(popup);
+    // });
+
+})});
+
+   
+    // resturants.forEach(function(food) {
+    //     console.log(food);
+    // })
+
+    // updatePage();
+
+
+
+    mapboxgl.accessToken = keys.mapbox;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/randychu7/cld4u7lhq000d01o2otr7r35o',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+        
+    });
+
+
+
+    // the  geocode method from mapbox-geocoder-utils.js 
+    // geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+    //     // console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(20);
+    // });
+
+
+    // function zoomCloser() {
+    //     geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+    //     // console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(20);
+    // });
+    // }
+
+    // $("#zoom-in").click(function(event){
+    //     zoomCloser();
+    // })
+    
+
+
+
+
+    // let marker = new mapboxgl.Marker()
+    // .setLngLat([-98.4916, 29.4260])
+    // .addTo(map);
+
+    // let popup = new mapboxgl.Popup()
+    // .setLngLat([-98.489615, 29.426827])
+    // .setHTML("<p>Codeup Rocks!</p>")
+    // .addTo(map)
+
+    // reverse geocoder
+    // reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
+    //     // logs the address for The Alamo
+    //     console.log(results);})
+
+
+
+
+    // function placeMarkerAndPopup(info, token, map) {
+    //     geocode(info.address, token).then(function(coordinates) {
+    //         var popup = new mapboxgl.Popup()
+    //             .setHTML(info.popupHTML);
+    //         var marker = new mapboxgl.Marker()
+    //             .setLngLat(coordinates)
+    //             .addTo(map)
+    //             .setPopup(popup);
+                
+    //             popup.addTo(map);
+    //     });
+    // }
+
+    // placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+    });
+
+</script>
+</body>
+</html>

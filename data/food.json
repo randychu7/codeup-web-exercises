@@ -1,28 +1,34 @@
 [
        {
         "Name": "The DogFather",
+        "image": "https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg",
         "long": "-98.49962874273244",
         "lat": "29.493481219142602",
         "type": "Fast Food",
-        "price": "$"
+        "price": "$",
+        "description": "Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer"
        
         },
 
         {
         "Name": "Almo Hot Dogs",
+        "image": "https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg",
         "long": "-98.4889853615491", 
         "lat": "29.42491092328355",
         "type": "Fast Food",
-        "price": "$$"
+        "price": "$$",
+        "description": "Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer"
            
         },
 
         {
         "Name": "El Weincero",
+        "image": "https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg",
         "long": "-98.4876466079693",
         "lat": "29.426613636165662",
         "type": "Fast Food",
-        "price": "$$$"
+        "price": "$$$",
+        "description": "Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer"
                
         }
   

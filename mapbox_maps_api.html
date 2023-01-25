@@ -49,6 +49,14 @@
 
 <body>
     <div class="page-wrapper">
+        
+
+        <div class="input-group mb-3">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
+    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  </div>
+
+
                 <header class="container">
                     <div class="row full-width">
                         <div class="column">
@@ -62,24 +70,11 @@
 
                 <main class="container">
                     <div class="row full-width">
-                                <aside class="column display">
-                                    <div></div>
-                                    <div class = "cards" style="background-color: #439eb7;"> 
-                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
-                                        <h2>Dog Father</h2>
-                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
-                                    </div>
-                                    <div class = "cards" style="background-color: #439eb7;"> 
-                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
-                                        <h2>Almo Hotdogs</h2>
-                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
-                                    </div>
-                                    <div class = "cards" id = "elweincero" style="background-color: #439eb7;"> 
-                                        <img src="https://images.happycow.net/venues/1024/11/98/hcmp119828_1317781.jpeg">
-                                        <h2>El Weincero</h2>
-                                        <p >507 E.Houston St. San Antonio, Texas 78205</p>
-                                        <p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>
-                                    </div>
+                        
+                                <aside class="column display data-section">
+                                    
+                                  
+
                                 </aside>
                         <div class="column">
                             <div id='map'></div>
@@ -102,64 +97,119 @@
 <script>
     $(document).ready(function(){
 
-    // function updatePage() {
-    //   // make request to orders.json
-    //   console.log('update resturants');
-    //   $.get('./data/food.json').done(function(orders) {
-        
+        $.get('https://api.openweathermap.org/data/2.5/forecast', {
+    q: "San Antonio, US",
+    // lat: 29.4252,
+    // lon: -98.4916,
+    appid: keys.weather
+,
+    units: 'imperial' 
+  }).done(function(data) {
+    // can be used to get forecast conditions at current time in increments of 24 hours
+    
+    for (let i = 0; i < data.list.length; i += 8) {
+    //   console.log(data.list[i]);
+    //   console.log(data.list[i].main);
+
+      let html = `<div class = "cards" style="background-color: #439eb7;"> 
+                                        <p> Date: ${data.list[i].dt_txt} </p>
+                                        <p> Status ${data.list[i].weather[0].main}.</p>
+                                        <p> Pressure ${data.list[i].main.pressure}.</p>
+                                        <p> Humidity ${data.list[i].main.humidity}.</p>
+                                        <p> Temp ${data.list[i].main.temp} F.</p>
+                                        <p> Wind ${data.list[i].wind.speed} MPH.</p>
+                                   
+                                  
+                                    </div>`
+
+                                    $('.data').append(html);
+
+    }
+  }).fail(function(jqXhr, status, error) {
+    console.log(jqXhr);
+    console.log(status);
+    console.log(error);
+  });
 
 
- 
-      
-    //   });
-    // }
 
     $.get('./data/food.json').done(function(food) {
         food.forEach(function(item) {
-       let popup = new mapboxgl.Popup()
-          
+            //popup
+        let popup = new mapboxgl.Popup()
             .setLngLat([item.long, item.lat])
             .setHTML(`<p>${item.Name}</p>
             <p>${item.type}</p>
             <p>${item.price}</p>`)
             // .addTo(map)
+            //Marker
           let marker = new mapboxgl
             .Marker()
             .setLngLat([item.long,item.lat])
             .addTo(map);
             marker.setPopup(popup);
-            
+
+//      $(#`${item.Name}`).on('click', function(){
+//     geocode([item.long,item.lat], keys.mapbox).then(function(result) {
+
+//     map.flyTo({center: result,
+//     essential: true})
+//     let marker = new mapboxgl
+//             .Marker()
+//             .setLngLat([item.long,item.lat])
+//             .addTo(map);
+//             marker.setPopup(popup);
+   
+
+// })});
+       
+           
+         let data = `<div class = "cards" style="background-color: #439eb7;"> 
+                                        <img src="${item.image}">
+                                        <h2>${item.Name}</h2>
+                                        <p>${item.description}.</p>
+                                    </div>
+                                  
+                                    </div>`
+
+                                    // $(".data-section").append(data);
+
+                                    marker.getElement().addEventListener('click', function(){
+                                    
+                                     $('.data-section').empty().append(data);
+                                    });
+
     })});
 
-    // console.log(item[2]);
+//     $('#button-addon1').on('click', function(){
+//     let value = $('.form-control').val();
+//     console.log(value);
 
-$('#elweincero').on('click', function(){
-        geocode("507 E.Houston St. San Antonio, Texas 78205", keys.mapbox).then(function(result) {
+// })
+ 
 
-    map.setCenter(result);
-    map.setZoom(20);
+$('#button-addon1').on('click', function(){
+    let value = $('.form-control').val();
+       
+    geocode(`${value}`, keys.mapbox).then(function(result) {
+
+    map.flyTo({center: result,
+    essential: true})
     let marker = new mapboxgl
             .Marker()
             .setLngLat([item.long,item.lat])
             .addTo(map);
             marker.setPopup(popup);
-    // });
 
 })});
 
-   
-    // resturants.forEach(function(food) {
-    //     console.log(food);
-    // })
-
-    // updatePage();
 
 
 
     mapboxgl.accessToken = keys.mapbox;
     let map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/randychu7/cld4u7lhq000d01o2otr7r35o',
+        style: 'mapbox://styles/randychu7/cldaflxq0005m01liz001ggla',
         zoom: 10,
         center: [-98.4916, 29.4252]
         

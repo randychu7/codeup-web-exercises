@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/weather-map.css">
+    <link rel="stylesheet" href="./css/animated-logo.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet'>
+    <link rel="stylesheet" 
+    href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+    
+</head>
+
+<body>
+         <div class="page-wrapper">
+                    <div class = "data-container"> 
+                         <div class = "dashboard">
+                                <header id = "nav-bar">
+                                        <!--------Location------------->
+                                        <img class = "location-icon" src ="./images/white-Icon.png">
+                                        <div class = "location" style = "color: white; font-size: 15px; margin-bottom: 10px;"><h5>San Antonio, Texas</h5> </div> 
+                                        
+                                        <!--------Search Bar----------->
+                                        <div class="input-group mb-3" style = "margin-top: 15px;">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon1"><img src ="images/search-icon.png" style = "width: 25px;"></button>
+                                            <input type="text" class="form-control" placeholder="Search City..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                          </div>
+                                       <!----------Greeting------------>
+                                        <div class = "greeting" style = "color: white;">Welcome, Randy <br> <span id = "fade-greeting">Have a great day</span></div>
+                                        <div class = "avatar"><img src = "images/grid_0.png"></div>
+                                </header>
+
+                             
+
+
+
+                                <main class="data-section container-xxl">
+                                        
+                                        <div class="row full-width"> 
+                                            
+                                                    <div class ="col-xxl-12" id = "data-area">
+                                                         <!----------Forcast-------------->
+                                                        <div class = "forecast"> Forecast</div>   
+                                                        <div class="column weather data">
+
+                          
+                                                            </div>
+                                                            
+                                                        <!----------------Weather Map--------------->
+                                                            <div class="column map col-xxl-12">
+                                                                <div class = "map-title">Weather Map</div>
+                                                                <div id='map'></div>
+                                                            </div>
+                                                    </div>
+
+
+                                        </div> 
+                                                    
+                                </main>
+
+                        </div>  
+                 </div> 
+        
+      </div>
+    
+
+
+
+<!--Keys-->
+<script src = "./js/keys.js"></script>
+<script src="./js/jquery-3.6.3.js"></script>
+<!--Mapbox Utils-->
+<script src = "./js/index-geocoder.js"></script>
+
+<script src = "./js/index.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script>
+
+</script>
+<!-- Custom JS -->
+
+</body>
+</html>

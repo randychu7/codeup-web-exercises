@@ -36,26 +36,21 @@ const user = [
     }
 ];
 
-// let filteredId = user.filter((user)=>{
-//  return user.languages.length >= 3 ;
-// })
-// console.log(filteredId);
+let filteredId = user.filter((u)=> u.languages.length >= 3)
+console.log(filteredId);
 
-// let ageArray = user.reduce((accumulator, currentValue) => {
-//     let experience = (accumulator += currentValue.yearsOfExperience);
-//     return experience;
+let ageArray = user.reduce((accumulator, currentValue) => {
+    let experience = (accumulator += currentValue.yearsOfExperience);
+    return experience;
 
-//   }, 0);
+  }, 0);
 
-//   console.log(ageArray);
+  console.log(ageArray/user.length);
 
 
-const mappedUser = user.map((n)=>{
-   return n.name;
-   
-});
+const mappedUser = user.map((n)=> n.email);
 
-// console.log(mappedUser);
+console.log(mappedUser);
 
 let longestEmail = mappedUser.reduce((curr,prev) => {
 return curr.length >= prev.length ? curr : prev;
@@ -64,15 +59,22 @@ return curr.length >= prev.length ? curr : prev;
 console.log(longestEmail);
 
 
- let userNames = user.reduce(( teacher, index) => {
-    if (index === teacher.length - 1) {
-        return `${sentence} ${teacher.name}.`;
-    } else {
-        return `${sentence} ${teacher.name},`;
-    }
-}, 'Your instructors are:');
-console.log(userNames);
+//  let userNames = user.reduce(( teacher, index) => {
+//     if (index === teacher.length - 1) {
+//         return `${sentence} ${teacher.name}.`;
+//     } else {
+//         return `${sentence} ${teacher.name},`;
+//     }
+// }, 'Your instructors are:');
+// console.log(userNames);
 
+
+const userNames = user.reduce((str,user)=>{
+str += user.name + ',';
+return str;
+}, 'Your instructors are: ').slice(0,-1)+ '.';
+
+console.log(userNames)
 
   // let id = 1;
   // let filterId = users.filter((user) => user.id !== id);

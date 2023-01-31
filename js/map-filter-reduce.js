@@ -1,62 +1,62 @@
-const user = [
-    {
-        id: 1,
-        name: 'ryan',
-        email: 'ryan@codeup.com',
-        languages: ['clojure', 'javascript'],
-        yearsOfExperience: 5
-    },
-    {
-        id: 2,
-        name: 'luis',
-        email: 'luis@codeup.com',
-        languages: ['java', 'scala', 'php'],
-        yearsOfExperience: 6
-    },
-    {
-        id: 3,
-        name: 'zach',
-        email: 'zach@codeup.com',
-        languages: ['javascript', 'bash'],
-        yearsOfExperience: 7
-    },
-    {
-        id: 4,
-        name: 'fernando',
-        email: 'fernando@codeup.com',
-        languages: ['java', 'php', 'sql'],
-        yearsOfExperience: 8
-    },
-    {
-        id: 5,
-        name: 'justin',
-        email: 'justin@codeup.com',
-        languages: ['html', 'css', 'javascript', 'php'],
-        yearsOfExperience: 9
-    }
-];
+// const user = [
+//     {
+//         id: 1,
+//         name: 'ryan',
+//         email: 'ryan@codeup.com',
+//         languages: ['clojure', 'javascript'],
+//         yearsOfExperience: 5
+//     },
+//     {
+//         id: 2,
+//         name: 'luis',
+//         email: 'luis@codeup.com',
+//         languages: ['java', 'scala', 'php'],
+//         yearsOfExperience: 6
+//     },
+//     {
+//         id: 3,
+//         name: 'zach',
+//         email: 'zach@codeup.com',
+//         languages: ['javascript', 'bash'],
+//         yearsOfExperience: 7
+//     },
+//     {
+//         id: 4,
+//         name: 'fernando',
+//         email: 'fernando@codeup.com',
+//         languages: ['java', 'php', 'sql'],
+//         yearsOfExperience: 8
+//     },
+//     {
+//         id: 5,
+//         name: 'justin',
+//         email: 'justin@codeup.com',
+//         languages: ['html', 'css', 'javascript', 'php'],
+//         yearsOfExperience: 9
+//     }
+// ];
 
-let filteredId = user.filter((u)=> u.languages.length >= 3)
-console.log(filteredId);
+// let filteredId = user.filter((u)=> u.languages.length >= 3)
+// console.log(filteredId);
 
-let ageArray = user.reduce((accumulator, currentValue) => {
-    let experience = (accumulator += currentValue.yearsOfExperience);
-    return experience;
+// let ageArray = user.reduce((accumulator, currentValue) => {
+//     let experience = (accumulator += currentValue.yearsOfExperience);
+//     return experience;
 
-  }, 0);
+//   }, 0);
 
-  console.log(ageArray/user.length);
+//   console.log(ageArray/user.length);
 
 
-const mappedUser = user.map((n)=> n.email);
+// const mappedUser = user.map((n)=> n.email);
 
-console.log(mappedUser);
+// console.log(mappedUser);
 
-let longestEmail = mappedUser.reduce((curr,prev) => {
-return curr.length >= prev.length ? curr : prev;
-},0);
+// let longestEmail = mappedUser.reduce((curr,prev) => {
+// return curr.length >= prev.length ? curr : prev;
+// },0);
 
-console.log(longestEmail);
+// console.log(longestEmail);
 
 
 //  let userNames = user.reduce(( teacher, index) => {
@@ -69,12 +69,12 @@ console.log(longestEmail);
 // console.log(userNames);
 
 
-const userNames = user.reduce((str,user)=>{
-str += user.name + ',';
-return str;
-}, 'Your instructors are: ').slice(0,-1)+ '.';
+// const userNames = user.reduce((str,user)=>{
+// str += user.name + ',';
+// return str;
+// }, 'Your instructors are: ').slice(0,-1)+ '.';
 
-console.log(userNames)
+// console.log(userNames)
 
   // let id = 1;
   // let filterId = users.filter((user) => user.id !== id);
@@ -217,3 +217,5 @@ console.log(userNames)
   //   return (prevValue += currentValue.price);
   // }, 0);
   // console.log(TotalCost);
+
+  

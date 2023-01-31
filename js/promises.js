@@ -50,8 +50,8 @@ const getName = async (username) => {
     }
   };
   
- let names = await getName('sally345');
-
+let names = await getName('sally123');
+// let inputNames = $('input').val();
 console.log(names)
 
 $('button').on('click',function (e) {

@@ -2,29 +2,29 @@
 
 (async() => {
 
-// async function getUsersApi(username){
-//     try {
-//         let getUsers = await fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.github}`}});
-//         let data = await getUsers.json();
-//         // return data;
-//         let mapped = data[0];
-//         console.log(mapped)
-//         } catch(error){
-//             console.log(error)
-//         }
-//     }
+async function getUsersApi(username){
+    try {
+        let getUsers = await fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.github}`}});
+        let data = await getUsers.json();
+        // return data;
+        let mapped = data[0];
+        console.log(mapped)
+        } catch(error){
+            console.log(error)
+        }
+    }
  
-//     console.log(await getUsersApi('randychu7'));
+    console.log(await getUsersApi('randychu7'));
    
 
-// function getUser(username){
-// return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.github}`}})
-// .then(response => response.json()).then((data) => {
-//     return data[0].created_at;
-// })
+function getUser(username){
+return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.github}`}})
+.then(response => response.json()).then((data) => {
+    return data[0].created_at;
+})
 
-// }
-// getUser('randychu7').then(console.log)
+}
+getUser('randychu7').then(console.log)
 
 // const getName = async (username) => {
 // try {
